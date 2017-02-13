@@ -1,0 +1,101 @@
+```js
+{
+  session: {
+    currentUser: {
+      id: 1,
+      username: "jtam"
+    },
+    logInErrors: [],
+    signUpErrors: []
+  },
+
+  nowPlaying: {
+      id: 23,
+      name: "Cool Song Name",
+      album_id: 1,
+      artist_id: 1,
+      duration: '194', // seconds
+      song_url: http://mysong.here
+  },
+
+  allArtists: {
+    1: {
+      id: 1,
+      name: 'Artist Name',
+      image_url: http://artistimage.here
+    },
+    ...
+  },
+
+  artistDetail: {
+    id: 1,
+    name: 'Artist Name',
+    image_url: http://artistimage.here,
+    albums: {
+      1: {
+        id: 1,
+        name: 'Album Name',
+        image_url: http://albumimage.here
+      },
+      ...
+    }
+  },
+
+  albumDetail: {
+    id: 1,
+    name: 'Album Name',
+    image_url: http://image.here,
+    artist_id: 1,
+    songs: {
+      1: {
+        id: 1,
+        name: 'Song Name',
+        duration: '203',
+        song_url: http://mysong.here
+      },
+      ...
+    }
+  },
+
+  yourMusicPlaylists: {
+    1: {
+      id: 1,
+      name: 'My Playlist 1',
+      own: true, // don't show username if it's your own playlists
+      username: 'jtam',
+      image_url: 'http://playlistimage.here'
+    },
+    ...
+  },
+
+  playlistDetail: {
+    id: 1,
+    name: 'My Playlist 1',
+    own: true, // only give edit powers if it's your own playlist
+    username: 'jtam',
+    followed: NULL, // can only follow/unfollow if another person's playlist
+    songs: {
+      ...
+    }
+  },
+
+  allUsers: {
+    1: {
+      id: 1,
+      username: 'jtam',
+      avatar_url: 'http://useravatar.here',
+    },
+    ...
+  },
+
+  userDetail: {
+    id: 1,
+    username: 'jtam',
+    avatar_url: 'http://useravatar.here',
+    playlists: {
+      ...
+    }
+  }
+
+}
+```
