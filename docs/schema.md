@@ -44,5 +44,5 @@ image_url   | string    | not null
 column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
-user_id     | integer   | not null, foreign key, indexed
+user_id     | integer   | not null, foreign key, indexed, unique [playlist_id] (user can only follow a playlist once)
 playlist_id | integer   | not null, foreign key, indexed
