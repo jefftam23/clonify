@@ -7,13 +7,15 @@
   + LogInErrors
 
 **MainNavContainer**
- - Logo
- - Navigation
- - LogOut
+ - MainNav
+   + Logo
+   + Navigation
+   + LogOut
 
 **AudioPlayerContainer**
- - NowPlaying
- - AudioControls
+ - AudioPlayer
+   + NowPlaying
+   + AudioControls
 
 **BrowseContainer**
  - Browse
