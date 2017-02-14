@@ -70,4 +70,4 @@
 | "/your-music" | "YourMusicContainer" |
 | "/follow" | "FollowContainer" |
 | "/users/:userId" | "UserDetailContainer" |
-| "/users/:userId/playlists/:playlistId" | "PlaylistDetailContainer" |
+| "/playlists/:playlistId" | "PlaylistDetailContainer" |
