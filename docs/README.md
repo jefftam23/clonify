@@ -16,9 +16,11 @@ sufficient CSS styling:
 
 - [ ] Hosting on Heroku
 - [ ] New account creation, login, and guest/demo login
+- [ ] Song playing
 - [ ] Continuous play while navigating site
 - [ ] Playlist CRUD
-- [ ] Playlist Following
+- [ ] Playlist following
+- [ ] User following
 - [ ] [Production README] (../README.md)
 
 ## Design Docs
@@ -52,9 +54,9 @@ sufficient CSS styling:
 
 **Objective:** Playlists belong to users and can be created, viewed, updated, and destroyed.
 
-### Phase 5: Follows (1 day)
+### Phase 5: Playlist and User Follows (1 day)
 
-**Objective:** Users can follow other users' playlists, which get added to the 'Your Music' section of the application.
+**Objective:** Users can follow other users and other users' playlists.
 
 ### Bonus Features (TBD)
 - [ ] Search songs, artists, albums, and playlists.
