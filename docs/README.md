@@ -4,7 +4,7 @@
 
 [Trello link][trello]
 
-[heroku]: http://www.herokuapp.com
+[heroku]: https://clonify.herokuapp.com
 [trello]: https://trello.com/b/gvIetAEc/clonify
 
 ## Minimum Viable Product
@@ -14,7 +14,7 @@ and React/Redux.  By the end of Week 9, this app will, at a minimum, satisfy the
 following criteria with smooth, bug-free navigation, adequate seed data and
 sufficient CSS styling:
 
-- [ ] Hosting on Heroku
+- [x] Hosting on Heroku
 - [ ] New account creation, login, and guest/demo login
 - [ ] Song playing
 - [ ] Continuous play while navigating site
