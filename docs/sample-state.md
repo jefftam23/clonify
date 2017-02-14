@@ -5,8 +5,7 @@
       id: 1,
       username: "jtam"
     },
-    logInErrors: [],
-    signUpErrors: []
+    errors: []
   },
 
   nowPlaying: {
@@ -83,6 +82,15 @@
     1: {
       id: 1,
       username: 'jtam',
+      avatar_url: 'http://useravatar.here',
+    },
+    ...
+  },
+
+  followedUsers: {
+    2: {
+      id: 2,
+      username: 'aa-student',
       avatar_url: 'http://useravatar.here',
     },
     ...
