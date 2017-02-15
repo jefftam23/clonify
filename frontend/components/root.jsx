@@ -3,6 +3,7 @@ import { Provider } from 'react-redux';
 import { Router, Route, IndexRoute, IndexRedirect, hashHistory } from 'react-router';
 import { receiveCurrentUser } from '../actions/session_actions';
 import App from './app';
+import Auth from './auth';
 import AuthFormContainer from './auth_form/auth_form_container';
 import BrowseContainer from './browse/browse_container';
 
@@ -10,7 +11,7 @@ const Root = ({ store }) => {
 
   const _clearErrors = () => {
     store.dispatch(receiveCurrentUser(null));
-  }
+  };
 
   const _loggedIn = () => {
     return Boolean(store.getState().session.currentUser);
@@ -18,6 +19,14 @@ const Root = ({ store }) => {
 
   const _ensureLoggedIn = (nextState, replace) => {
     if (!_loggedIn()) {
+      replace('/login');
+    }
+  };
+
+  const _redirect = (nextState, replace) => {
+    if (_loggedIn()) {
+      replace('/browse');
+    } else {
       replace('/login');
     }
   };
@@ -32,16 +41,26 @@ const Root = ({ store }) => {
   return (
     <Provider store={ store }>
       <Router history={ hashHistory }>
-        <Route path="/" component={ App } />
+
+        <Route path="/">
+          <IndexRoute onEnter={ _redirect } />
+
+          <Route component={ App }>
+            <Route path="/browse"
+              component={ BrowseContainer }
+              onEnter={ _ensureLoggedIn } />
+          </Route>
+        </Route>
+
+        <Route component={ Auth }>
           <Route path="/signup"
             component={ AuthFormContainer }
             onEnter={ _sessionEnter } />
           <Route path="/login"
             component={ AuthFormContainer }
             onEnter={ _sessionEnter }/>
-          <Route path="/browse"
-            component={ BrowseContainer }
-            onEnter={ _ensureLoggedIn } />
+        </Route>
+
       </Router>
     </Provider>
   );
