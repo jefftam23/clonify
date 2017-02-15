@@ -49,7 +49,7 @@ class AuthForm extends React.Component {
   }
 
   render() {
-    const { processForm, formType } = this.props;
+    const { errors, processForm, formType } = this.props;
 
     const submitText = ( formType === "signup" ) ?
       "SIGN UP" :
@@ -64,6 +64,24 @@ class AuthForm extends React.Component {
       "/login" :
       "/signup";
 
+    const errorListItems = (
+      errors.map((error, idx) => {
+        return (
+          <li>
+            { error }
+          </li>
+        )
+      })
+    );
+
+    const errorList = (
+      <ul>
+        {
+          errorListItems
+        }
+      </ul>
+    );
+
     const guestLoginButton = (
       <button
         onClick={ this.handleGuestLogin }>
@@ -74,6 +92,8 @@ class AuthForm extends React.Component {
     return (
       <div>
         <h1>AUTH FORM</h1>
+
+        { errorList }
 
         { (formType === "login") ? guestLoginButton : "" }
 
