@@ -3,8 +3,8 @@
   background: black;
   color: white;
   display: flex;
+  font-family: "proxima nova", sans-serif;
   height: 100%;
-  font-family: "proxima nova regular", sans-serif;
   font-size: 12px;
 }
 
@@ -87,7 +87,6 @@
 
 .welcome-features > h1 {
   color: $green;
-  font-family: "proxima nova regular";
   font-size: 60px;
   font-weight: bold;
 }
