@@ -8,15 +8,20 @@ import BrowseContainer from './browse/browse_container';
 const Root = ({ store }) => {
 
   const _loggedIn = () => {
-    return !!store.getState().session.currentUser;
+    return Boolean(store.getState().session.currentUser);
+  };
+
+  const _ensureLoggedIn = (nextState, replace) => {
+    if (!_loggedIn()) {
+      replace('/login');
+    }
   };
 
   const _redirectIfLoggedIn = (nextState, replace) => {
-    const currentUser = store.getState().session.currentUser;
-    if (currentUser) {
+    if (_loggedIn()) {
       replace('/browse');
     }
-  }
+  };
 
   return (
     <Provider store={ store }>
@@ -28,7 +33,9 @@ const Root = ({ store }) => {
           <Route path="/login"
             component={ AuthFormContainer }
             onEnter={ _redirectIfLoggedIn }/>
-          <Route path="/browse" component={ BrowseContainer } />
+          <Route path="/browse"
+            component={ BrowseContainer }
+            onEnter={ _ensureLoggedIn } />
       </Router>
     </Provider>
   );

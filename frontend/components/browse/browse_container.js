@@ -1,16 +1,17 @@
 import { connect } from 'react-redux';
-import { login, logout, signup } from '../../actions/session_actions';
+import { logout } from '../../actions/session_actions';
 import Browse from './browse';
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    currentUser: state.session.currentUser
+    currentUser: state.session.currentUser,
+    loggedIn: Boolean(state.session.currentUser)
   };
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
-
+    logout: () => dispatch(logout())
   };
 };
 
