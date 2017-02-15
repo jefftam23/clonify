@@ -90,7 +90,7 @@ class AuthForm extends React.Component {
     );
 
     return (
-      <div>
+      <div className="auth-form">
         <h1>AUTH FORM</h1>
 
         { errorList }

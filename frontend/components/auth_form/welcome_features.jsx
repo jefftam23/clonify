@@ -2,7 +2,7 @@ import React from 'react';
 
 const WelcomeFeatures = () => {
   return (
-    <div>
+    <div className="welcome-features">
       <h1>Get the right music, right now</h1>
       <h2>Listen to millions of songs for free.</h2>
       <ul>
