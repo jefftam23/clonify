@@ -70,7 +70,7 @@ class AuthForm extends React.Component {
           <li>
             { error }
           </li>
-        )
+        );
       })
     );
 
@@ -84,14 +84,15 @@ class AuthForm extends React.Component {
 
     const guestLoginButton = (
       <button
-        onClick={ this.handleGuestLogin }>
+        onClick={ this.handleGuestLogin }
+        className="green-button">
         GUEST LOGIN
       </button>
     );
 
     return (
-      <div className="auth-form">
-        <h1>AUTH FORM</h1>
+      <div className="auth-form-wrapper">
+        <h1>Logo goes here</h1>
 
         { errorList }
 
@@ -100,26 +101,31 @@ class AuthForm extends React.Component {
         <form onSubmit={ this.handleSubmit }>
 
           <br/>
-          <label>Username<br/>
+          <label htmlFor="input-username">Username</label><br/>
             <input
+              id="input-username"
               type="text"
+              placeholder="Clonify username"
               onChange={ this.update('username') }
               value={ this.state.username } />
-          </label>
 
           <br/>
-          <label>Password<br/>
+          <label htmlFor="input-password">Password</label><br/>
             <input
+              id="input-password"
               type="password"
+              placeholder="Password"
               onChange={ this.update('password') }
               value={ this.state.password } />
-          </label>
 
           <br/>
-          <input type="submit" value={ submitText }/>
+          <input
+            type="submit"
+            value={ submitText }
+            className="transparent-button" />
 
         </form>
-        <div>
+        <div className="auth-footer">
           { questionText }
           <Link to={ linkPath }>{ linkText }</Link>
         </div>

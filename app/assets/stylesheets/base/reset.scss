@@ -16,6 +16,21 @@ span, article, footer, time, small {
   vertical-align: inherit;
   box-sizing: inherit;
   background: transparent;
+
+  cursor: default;
+
+  // Remove ability to highlight text
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+     -moz-user-select: none; /* Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+          user-select: none; /* Non-prefixed version, currently
+                                supported by Chrome and Opera */
+}
+
+html, body, #root {
+  height: 100%;
 }
 
 ul {
@@ -43,6 +58,7 @@ button {
   appearance: none;
 }
 
+a,
 button,
 input[type="submit"] {
   cursor: pointer;

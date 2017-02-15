@@ -1,0 +1,84 @@
+.auth {
+  align-items: center;
+  background: black;
+  color: white;
+  display: flex;
+  height: 100%;
+  font-family: "proxima_nova", sans-serif;
+  font-size: 12px;
+}
+
+.auth ::-webkit-input-placeholder {
+  color: white;
+  font-size: 14px;
+}
+
+.auth-form-wrapper {
+  padding: 45px;
+}
+
+.transparent-button {
+  background-color: transparent;
+  border: solid 1.5px white;
+  border-radius: 250px;
+  color: white;
+  font-size: 13px;
+  height: 40px;
+  width: 300px;
+  text-align: center;
+}
+
+.green-button {
+  background-color: $green;
+  border: solid 1.5px $green;
+  border-radius: 250px;
+  color: white;
+  font-size: 13px;
+  height: 40px;
+  width: 300px;
+  text-align: center;
+}
+
+.auth-form-wrapper label {
+  color: #a0a0a0;
+  font-size: 13px;
+}
+
+.auth-form-wrapper input[type="text"],
+.auth-form-wrapper input[type="password"] {
+  border-bottom: solid 1px white;
+  color: black;
+  padding: 2px;
+  width: 300px;
+}
+
+.auth-footer {
+}
+
+.auth-footer > a {
+  font-weight: bold;
+}
+
+.auth-footer > a:hover {
+  border-bottom: solid 1px white;
+}
+
+.welcome-features {
+  border-left: solid 1px #999;
+  padding: 45px;
+  // width: 600px;
+  flex: 0 0 600px;
+}
+
+.welcome-features > h1 {
+  color: $green;
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.welcome-features > h2 {
+  font-size: 28px;
+  font-weight: 100;
+  margin-top: 35px;
+  margin-bottom: 40px;
+}
