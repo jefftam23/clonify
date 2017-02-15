@@ -34,8 +34,9 @@ const Root = ({ store }) => {
   const _sessionEnter = (nextState, replace) => {
     if (_loggedIn()) {
       replace('/browse');
+    } else {
+      _clearErrors();
     }
-    _clearErrors();
   };
 
   return (
@@ -52,7 +53,7 @@ const Root = ({ store }) => {
           </Route>
         </Route>
 
-        <Route component={ Auth }>
+        <Route component={ Auth } onEnter={ _sessionEnter }>
           <Route path="/signup"
             component={ AuthFormContainer }
             onEnter={ _sessionEnter } />
