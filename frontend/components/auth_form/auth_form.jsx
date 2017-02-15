@@ -15,14 +15,14 @@ class AuthForm extends React.Component {
   }
 
   componentDidUpdate() {
-		this.redirectIfLoggedIn();
-	}
+    this.redirectIfLoggedIn();
+  }
 
-	redirectIfLoggedIn() {
-		if (this.props.loggedIn) {
+  redirectIfLoggedIn() {
+    if (this.props.loggedIn) {
       this.props.router.push("/browse");
-		}
-	}
+    }
+  }
 
   update(field) {
     return (e) => {
