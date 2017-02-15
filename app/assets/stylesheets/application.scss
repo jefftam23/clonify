@@ -22,3 +22,8 @@
 
 // Components
 @import "components/*";
+
+@font-face {
+  font-family: "proxima nova regular";
+  src: url(/assets/ProximaNova-Regular.otf) format("truetype");
+}
