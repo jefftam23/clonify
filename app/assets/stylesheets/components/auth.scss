@@ -8,8 +8,16 @@
   font-size: 12px;
 }
 
+.auth .error {
+  color: #ce1a2b;
+  text-align: center;
+}
+
+.auth-form-wrapper input[type="text"],
+.auth-form-wrapper input[type="password"],
 .auth ::-webkit-input-placeholder {
   color: white;
+  display: block;
   font-size: 14px;
 }
 
@@ -22,8 +30,10 @@
   border: solid 1.5px white;
   border-radius: 250px;
   color: white;
+  display: block;
   font-size: 13px;
   height: 40px;
+  margin: 20px 0;
   width: 300px;
   text-align: center;
 }
@@ -33,26 +43,31 @@
   border: solid 1.5px $green;
   border-radius: 250px;
   color: white;
+  display: block;
   font-size: 13px;
   height: 40px;
+  margin: 20px 0;
   width: 300px;
   text-align: center;
 }
 
 .auth-form-wrapper label {
   color: #a0a0a0;
+  display: block;
   font-size: 13px;
+  margin-bottom: 5px;
+  margin-top: 15px;
 }
 
 .auth-form-wrapper input[type="text"],
 .auth-form-wrapper input[type="password"] {
   border-bottom: solid 1px white;
-  color: black;
-  padding: 2px;
+  height: 25px;
   width: 300px;
 }
 
 .auth-footer {
+  text-align: center;
 }
 
 .auth-footer > a {

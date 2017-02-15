@@ -67,7 +67,7 @@ class AuthForm extends React.Component {
     const errorListItems = (
       errors.map((error, idx) => {
         return (
-          <li>
+          <li className="error">
             { error }
           </li>
         );
@@ -96,12 +96,11 @@ class AuthForm extends React.Component {
 
         { errorList }
 
-        { (formType === "login") ? guestLoginButton : "" }
-
         <form onSubmit={ this.handleSubmit }>
 
-          <br/>
-          <label htmlFor="input-username">Username</label><br/>
+          { (formType === "login") ? guestLoginButton : "" }
+
+          <label htmlFor="input-username">Username</label>
             <input
               id="input-username"
               type="text"
@@ -109,8 +108,7 @@ class AuthForm extends React.Component {
               onChange={ this.update('username') }
               value={ this.state.username } />
 
-          <br/>
-          <label htmlFor="input-password">Password</label><br/>
+          <label htmlFor="input-password">Password</label>
             <input
               id="input-password"
               type="password"
@@ -118,7 +116,6 @@ class AuthForm extends React.Component {
               onChange={ this.update('password') }
               value={ this.state.password } />
 
-          <br/>
           <input
             type="submit"
             value={ submitText }
