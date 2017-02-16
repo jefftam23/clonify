@@ -10,7 +10,7 @@ export const fetchAllArtists = () => {
   };
 };
 
-export const fetchArtistDetail = (id) => {
+export const fetchArtistDetails = (id) => {
   return (dispatch) => {
     return ArtistApiUtil.fetchArtistDetails(id)
       .then(artistDetails => dispatch(receiveArtistDetails(artistDetails)));
