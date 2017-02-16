@@ -1,5 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router';
+import ArtistIndexContainer from './artist_index_container';
 
 class Browse extends React.Component {
 
@@ -15,10 +16,13 @@ class Browse extends React.Component {
     return (
       <div>
         <h1>BROWSE ARTISTS</h1>
+
         <h2>Hello { currentUser.username }!</h2>
         <button
           onClick={ logout }>LOGOUT
         </button>
+
+        <ArtistIndexContainer />
       </div>
     );
   }
