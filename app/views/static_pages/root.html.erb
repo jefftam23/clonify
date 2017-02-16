@@ -5,6 +5,11 @@
       user: current_user
     ).html_safe %>
   <% end %>
+
+  window.images = {
+    clonifyLogo: "<%= image_path("clonify-logo.png") %>",
+    logo: "<%= image_path("logo.png") %>"
+  }
 </script>
 
 <main id="root"></main>
