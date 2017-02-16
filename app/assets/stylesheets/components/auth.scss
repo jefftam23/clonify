@@ -4,8 +4,9 @@
   color: white;
   display: flex;
   font-family: "proxima nova", sans-serif;
-  height: 100%;
   font-size: 12px;
+  height: 100%;
+  justify-content: center;
 }
 
 .auth .clonify-logo {
@@ -100,7 +101,7 @@
 
 .welcome-features > h2 {
   font-size: 28px;
-  font-family: "proxima nova light";
+  font-family: "proxima nova light", sans-serif;;
   margin-top: 35px;
   margin-bottom: 40px;
 }
