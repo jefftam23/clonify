@@ -13,5 +13,5 @@ class Song < ActiveRecord::Base
   validates :name, :album, :artist, presence: true
 
   belongs_to :album
-  has_one :artist, through: album
+  has_one :artist, through: :album
 end
