@@ -92,8 +92,9 @@ class AuthForm extends React.Component {
 
     return (
       <div className="auth-form-wrapper">
-        <h1>Logo goes here</h1>
-        <img src={ window.images.clonifyLogo } />
+        <img
+          className="clonify-logo"
+          src={ window.images.clonifyLogo } />
 
         { errorList }
 
