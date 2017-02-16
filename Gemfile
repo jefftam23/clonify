@@ -33,6 +33,8 @@ gem 'bcrypt', '~> 3.1.7'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem "paperclip", '~> 5.0.0'
+
 group :production, :development, :test do
   gem 'pry-rails'
 end
