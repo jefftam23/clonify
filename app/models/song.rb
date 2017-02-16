@@ -10,7 +10,8 @@
 #
 
 class Song < ActiveRecord::Base
-  validates :name, :album, presence: true
+  validates :name, :album, :artist, presence: true
 
   belongs_to :album
+  has_one :artist, through: album
 end
