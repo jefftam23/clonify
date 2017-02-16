@@ -26,7 +26,7 @@
     ...
   },
 
-  artistDetail: {
+  artistDetails: {
     id: 1,
     name: 'Artist Name',
     image_url: http://artistimage.here,
@@ -40,7 +40,7 @@
     }
   },
 
-  albumDetail: {
+  albumDetails: {
     id: 1,
     name: 'Album Name',
     image_url: http://image.here,
@@ -67,7 +67,7 @@
     ...
   },
 
-  playlistDetail: {
+  playlistDetails: {
     id: 1,
     name: 'My Playlist 1',
     own: true, // only give edit powers if it's your own playlist
@@ -96,7 +96,7 @@
     ...
   },
 
-  userDetail: {
+  userDetails: {
     id: 1,
     username: 'jtam',
     avatar_url: 'http://useravatar.here',
