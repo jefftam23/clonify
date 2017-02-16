@@ -6,6 +6,7 @@ import App from './app';
 import Auth from './auth';
 import AuthFormContainer from './auth_form/auth_form_container';
 import BrowseContainer from './browse/browse_container';
+import ArtistDetailContainer from './browse/artist_detail_container';
 
 const Root = ({ store }) => {
 
@@ -47,19 +48,14 @@ const Root = ({ store }) => {
           <IndexRoute onEnter={ _redirect } />
 
           <Route component={ App }>
-            <Route path="/browse"
-              component={ BrowseContainer }
-              onEnter={ _ensureLoggedIn } />
+            <Route path="/browse" component={ BrowseContainer } onEnter={ _ensureLoggedIn } />
+            <Route path="/artist/:artistId" component={ ArtistDetailContainer } onEnter={ _ensureLoggedIn } />
           </Route>
         </Route>
 
         <Route component={ Auth } onEnter={ _sessionEnter }>
-          <Route path="/signup"
-            component={ AuthFormContainer }
-            onEnter={ _sessionEnter } />
-          <Route path="/login"
-            component={ AuthFormContainer }
-            onEnter={ _sessionEnter }/>
+          <Route path="/signup" component={ AuthFormContainer } onEnter={ _sessionEnter } />
+          <Route path="/login" component={ AuthFormContainer } onEnter={ _sessionEnter } />
         </Route>
 
       </Router>
