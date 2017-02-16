@@ -21,7 +21,7 @@
     1: {
       id: 1,
       name: 'Artist Name',
-      image_url: http://artistimage.here
+      imageUrl: http://artistimage.here
     },
     ...
   },
@@ -29,12 +29,12 @@
   artistDetails: {
     id: 1,
     name: 'Artist Name',
-    image_url: http://artistimage.here,
+    imageUrl: http://artistimage.here,
     albums: {
       1: {
         id: 1,
         name: 'Album Name',
-        image_url: http://albumimage.here
+        imageUrl: http://albumimage.here
       },
       ...
     }
@@ -43,7 +43,7 @@
   albumDetails: {
     id: 1,
     name: 'Album Name',
-    image_url: http://image.here,
+    imageUrl: http://image.here,
     artist_id: 1,
     songs: {
       1: {
@@ -62,7 +62,7 @@
       name: 'My Playlist 1',
       own: true, // don't show username if it's your own playlists
       username: 'jtam',
-      image_url: 'http://playlistimage.here'
+      imageUrl: 'http://playlistimage.here'
     },
     ...
   },
