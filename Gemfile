@@ -35,6 +35,7 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem "paperclip", '~> 5.0.0'
 gem 'figaro'
+gem 'aws-sdk', '>= 2.0'
 
 group :production, :development, :test do
   gem 'pry-rails'
