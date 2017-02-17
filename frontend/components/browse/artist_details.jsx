@@ -16,7 +16,7 @@ class ArtistDetails extends React.Component {
   render() {
     const { name, imageUrl, albums } = this.props.artistDetails;
     return (
-      <div>
+      <div className="main-content">
         <ArtistHeader name={ name } imageUrl={ imageUrl }/>
         <AlbumIndexContainer albums={ albums }/>
       </div>
