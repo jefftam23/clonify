@@ -11,10 +11,10 @@
   nowPlaying: {
       id: 23,
       name: "Cool Song Name",
-      album_id: 1,
-      artist_id: 1,
+      albumId: 1,
+      artistId: 1,
       duration: '194', // seconds
-      song_url: http://mysong.here
+      songUrl: http://mysong.here
   },
 
   allArtists: {
@@ -44,13 +44,13 @@
     id: 1,
     name: 'Album Name',
     imageUrl: http://image.here,
-    artist_id: 1,
+    artistId: 1,
     songs: {
       1: {
         id: 1,
         name: 'Song Name',
         duration: '203',
-        song_url: http://mysong.here
+        songUrl: http://mysong.here
       },
       ...
     }
@@ -82,7 +82,7 @@
     1: {
       id: 1,
       username: 'jtam',
-      avatar_url: 'http://useravatar.here',
+      imageUrl: 'http://useravatar.here',
     },
     ...
   },
@@ -91,7 +91,7 @@
     2: {
       id: 2,
       username: 'aa-student',
-      avatar_url: 'http://useravatar.here',
+      imageUrl: 'http://useravatar.here',
     },
     ...
   },
@@ -99,7 +99,7 @@
   userDetails: {
     id: 1,
     username: 'jtam',
-    avatar_url: 'http://useravatar.here',
+    imageUrl: 'http://useravatar.here',
     playlists: {
       ...
     }
