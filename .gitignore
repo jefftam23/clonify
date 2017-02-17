@@ -24,7 +24,7 @@ bundle.js.map
 npm-debug.log
 
 # For testing purposes
-seed_images/
+image_seeds/
 
 # Ignore application configuration
 /config/application.yml
