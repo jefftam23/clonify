@@ -5,6 +5,22 @@
   width: 90px;
 }
 
+.main-nav {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.top-nav {
+}
+
+.bottom-nav {
+  border-top: 1px solid black;
+  padding-top: 20px;
+  text-align: center;
+}
+
 .main-nav-wrapper a {
   width: 90px;
 }
@@ -45,4 +61,24 @@
   margin: 0 auto;
   height: 35px;
   width: 35px;
+}
+
+.current-user p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 70px;
+  margin: 0 auto;
+}
+
+.logout-button {
+  background-color: #4e4e4e;
+  border-radius: 10px;
+  font-size: 12px;
+  height: 21px;
+  width: 75px;
+  margin: 20px 0;
+}
+
+.logout-button:hover {
+  background-color: #8c8c8c;
 }
