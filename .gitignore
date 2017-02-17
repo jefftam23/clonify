@@ -23,8 +23,5 @@ bundle.js.map
 .DS_Store
 npm-debug.log
 
-# For testing purposes
-image_seeds/
-
 # Ignore application configuration
 /config/application.yml
