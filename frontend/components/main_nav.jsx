@@ -1,9 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router';
+import { Link, hashHistory } from 'react-router';
 import { logout } from '../actions/session_actions';
 import { connect } from 'react-redux';
 
-const MainNav = ({ logout }) => {
+const MainNav = ({ logout, currentUser }) => {
   return (
     <header className="main-nav-wrapper">
       <nav className="main-nav">
@@ -46,11 +46,11 @@ const MainNav = ({ logout }) => {
         <div className="bottom-nav">
 
           <div className="current-user">
-            <p>{ window.currentUser.username }</p>
+            <p>{ currentUser ? currentUser.username : "" }</p>
           </div>
 
           <button className="logout-button"
-            onClick={ logout }>LOG OUT
+            onClick={ () => logout().then(hashHistory.push('/login')) }>LOG OUT
           </button>
 
         </div>
@@ -61,6 +61,7 @@ const MainNav = ({ logout }) => {
 
 const mapStateToProps = (state) => {
   return {
+    currentUser: state.session.currentUser
   };
 };
 
