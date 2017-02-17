@@ -1,0 +1,48 @@
+.main-nav-wrapper {
+  background-color: $dark-gray;
+  position: fixed;
+  height: 100%;
+  width: 90px;
+}
+
+.main-nav-wrapper a {
+  width: 90px;
+}
+
+.nav-logo a {
+  align-items: center;
+  display: flex;
+  height: 95px;
+}
+
+.nav-logo img {
+  margin: 0 auto;
+  height: 60px;
+  width: 60px;
+}
+
+.nav-item-text {
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.main-nav-items a {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 75px;
+  opacity: 0.5;
+}
+
+.main-nav-items a:hover {
+  opacity: 1;
+}
+
+.main-nav-items img {
+  margin: 0 auto;
+  height: 35px;
+  width: 35px;
+}

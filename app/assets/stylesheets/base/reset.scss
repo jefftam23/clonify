@@ -10,14 +10,13 @@ span, article, footer, time, small {
   border: 0;
   outline: 0;
   font: inherit;
+  font-family: "proxima nova", sans-serif;
   color: inherit;
   text-align: inherit;
   text-decoration: inherit;
   vertical-align: inherit;
   box-sizing: inherit;
   background: transparent;
-
-  cursor: default;
 
   // Remove ability to highlight text
   -webkit-touch-callout: none; /* iOS Safari */

@@ -16,7 +16,7 @@ class ArtistIndex extends React.Component {
     });
 
     return (
-      <div>
+      <div className="artist-index">
         <ul>
           { artistIndexItems }
         </ul>

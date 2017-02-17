@@ -14,13 +14,10 @@ class Browse extends React.Component {
     const { currentUser, logout } = this.props;
 
     return (
-      <div>
+      <div className="main-content">
         <h1>BROWSE ARTISTS</h1>
 
         <h2>Hello { currentUser.username }!</h2>
-        <button
-          onClick={ logout }>LOGOUT
-        </button>
 
         <ArtistIndexContainer />
       </div>
