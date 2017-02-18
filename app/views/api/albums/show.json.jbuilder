@@ -1,5 +1,8 @@
 json.partial! 'api/albums/album', album: @album
-json.artistId @album.artist.id
+json.artist do
+  json.id @album.artist.id
+  json.name @album.artist.name
+end
 
 if @album.songs.empty?
   json.songs({})

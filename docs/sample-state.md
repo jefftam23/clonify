@@ -44,7 +44,10 @@
     id: 1,
     name: 'Album Name',
     imageUrl: http://image.here,
-    artistId: 1,
+    artist: {
+      id: 1,
+      name: 'Artist Name'
+    },
     songs: {
       1: {
         id: 1,
