@@ -11,6 +11,8 @@ ALBUMS = 'albums'
 SONGS = 'songs'
 
 Artist.destroy_all
+Album.destroy_all
+Song.destroy_all
 
 guest = User.create({ username: 'guest', password: 'password' })
 
@@ -33,4 +35,29 @@ artists = [
 
 artists.each do |attributes|
   Artist.create!(attributes)
+end
+
+albums = [
+  {name: 'Weezer (Blue Album)', image: seed_image(ALBUMS, 'weezer_blue_album.png'), artist: Artist.find_by_name('Weezer')},
+  {name: 'Pinkerton', image: seed_image(ALBUMS, 'pinkerton.jpg'), artist: Artist.find_by_name('Weezer')},
+  {name: 'In Between Dreams', image: seed_image(ALBUMS, 'in_between_dreams.jpg'), artist: Artist.find_by_name('Jack Johnson')},
+]
+
+albums.each do |attributes|
+  Album.create!(attributes)
+end
+
+songs = [
+  {name: 'In the Garage', album: Album.find_by_name('Weezer (Blue Album)')},
+  {name: 'Say It Ain\'t So', album: Album.find_by_name('Weezer (Blue Album)')},
+  {name: 'Only In Dreams', album: Album.find_by_name('Weezer (Blue Album)')},
+  {name: 'The World Has Turned and Left Me Here', album: Album.find_by_name('Weezer (Blue Album)')},
+  {name: 'The Good Life', album: Album.find_by_name('Pinkerton')},
+  {name: 'No Other Way', album: Album.find_by_name('In Between Dreams')},
+  {name: 'Do You Remember', album: Album.find_by_name('In Between Dreams')},
+  {name: 'Better Together', album: Album.find_by_name('In Between Dreams')},
+]
+
+songs.each do |attributes|
+  Song.create!(attributes)
 end
