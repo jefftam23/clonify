@@ -7,6 +7,7 @@ import Auth from './auth';
 import AuthFormContainer from './auth_form/auth_form_container';
 import BrowseContainer from './browse/browse_container';
 import ArtistDetailsContainer from './browse/artist_details_container';
+import AlbumDetailsContainer from './browse/album_details_container';
 
 const Root = ({ store }) => {
 
@@ -50,6 +51,7 @@ const Root = ({ store }) => {
           <Route component={ App }>
             <Route path="/browse" component={ BrowseContainer } onEnter={ _ensureLoggedIn } />
             <Route path="/artists/:artistId" component={ ArtistDetailsContainer } onEnter={ _ensureLoggedIn } />
+            <Route path="/albums/:albumId" component={ AlbumDetailsContainer } onEnter={ _ensureLoggedIn } />
           </Route>
         </Route>
 
