@@ -98,9 +98,9 @@ class AuthForm extends React.Component {
 
         { errorList }
 
-        <form onSubmit={ this.handleSubmit }>
+        { (formType === "login") ? guestLoginButton : "" }
 
-          { (formType === "login") ? guestLoginButton : "" }
+        <form onSubmit={ this.handleSubmit }>
 
           <label htmlFor="input-username">Username</label>
             <input
