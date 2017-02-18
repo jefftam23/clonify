@@ -4,7 +4,7 @@ import { fetchAlbumDetails } from '../../actions/album_actions';
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    albumDetails: state.albumDetails
+    albumDetails: state.albumDetails,
   };
 };
 
