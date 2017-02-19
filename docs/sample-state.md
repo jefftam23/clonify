@@ -11,10 +11,12 @@
   nowPlaying: {
       id: 23,
       name: "Cool Song Name",
-      albumId: 1,
-      artistId: 1,
+      songUrl: http://mysong.here,
       duration: '194', // seconds
-      songUrl: http://mysong.here
+      albumId: 1,
+      albumImageUrl: http://albumimage.here,
+      artistId: 1,
+      artistName: "Artist Name"
   },
 
   allArtists: {
