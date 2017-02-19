@@ -1,5 +1,6 @@
 import React from 'react';
 import AlbumHeader from './album_header';
+import SongTable from './song_table';
 
 class AlbumDetails extends React.Component {
   componentDidMount() {
@@ -13,7 +14,7 @@ class AlbumDetails extends React.Component {
   }
 
   render() {
-    const { albumDetails: { name, imageUrl, artist } } = this.props;
+    const { albumDetails: { name, imageUrl, artist, songs } } = this.props;
 
     return (
       <div className="main-content">
@@ -22,9 +23,7 @@ class AlbumDetails extends React.Component {
           imageUrl={ imageUrl }
           artist={ artist } />
 
-        {
-          // <SongTable />
-        }
+        <SongTable songs={ songs }/>
       </div>
     );
   }
