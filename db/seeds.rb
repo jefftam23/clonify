@@ -20,6 +20,10 @@ def seed_image(type, file_name)
   File.open(File.join(Rails.root, "/app/assets/images/seeds/#{type}/#{file_name}"))
 end
 
+def seed_audio(file_name)
+  File.open(File.join(Rails.root, "/app/assets/songs/#{file_name}"))
+end
+
 artists = [
   {name: 'Weezer', image: seed_image(ARTISTS, 'weezer.jpg')},
   {name: 'Jack Johnson', image: seed_image(ARTISTS, 'jack_johnson.jpg')},
@@ -48,14 +52,13 @@ albums.each do |attributes|
 end
 
 songs = [
-  {name: 'In the Garage', album: Album.find_by_name('Weezer (Blue Album)')},
-  {name: 'Say It Ain\'t So', album: Album.find_by_name('Weezer (Blue Album)')},
-  {name: 'Only In Dreams', album: Album.find_by_name('Weezer (Blue Album)')},
-  {name: 'The World Has Turned and Left Me Here', album: Album.find_by_name('Weezer (Blue Album)')},
-  {name: 'The Good Life', album: Album.find_by_name('Pinkerton')},
-  {name: 'No Other Way', album: Album.find_by_name('In Between Dreams')},
-  {name: 'Do You Remember', album: Album.find_by_name('In Between Dreams')},
-  {name: 'Better Together', album: Album.find_by_name('In Between Dreams')},
+  {name: 'In the Garage', audio: seed_audio('In the Garage.mp3'), album: Album.find_by_name('Weezer (Blue Album)')},
+  {name: 'Say It Ain\'t So', audio: seed_audio('Say It Ain\'t So.mp3'), album: Album.find_by_name('Weezer (Blue Album)')},
+  {name: 'Only in Dreams', audio: seed_audio('Only in Dreams.mp3'), album: Album.find_by_name('Weezer (Blue Album)')},
+  {name: 'The Good Life', audio: seed_audio('The Good Life.mp3'), album: Album.find_by_name('Pinkerton')},
+  {name: 'No Other Way', audio: seed_audio('No Other Way.mp3'), album: Album.find_by_name('In Between Dreams')},
+  {name: 'Do You Remember', audio: seed_audio('Do You Remember.mp3'), album: Album.find_by_name('In Between Dreams')},
+  {name: 'Better Together', audio: seed_audio('Better Together.mp3'), album: Album.find_by_name('In Between Dreams')},
 ]
 
 songs.each do |attributes|
