@@ -1,6 +1,6 @@
 import { RECEIVE_SONG_DETAILS } from '../actions/song_actions';
 
-const NowPlayingReducer = (oldState = {}, action) => {
+const NowPlayingReducer = (oldState = null, action) => {
   Object.freeze(oldState);
 
   switch (action.type) {
