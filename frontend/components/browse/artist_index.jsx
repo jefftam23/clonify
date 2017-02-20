@@ -17,7 +17,7 @@ class ArtistIndex extends React.Component {
 
     return (
       <div className="artist-index">
-        <ul>
+        <ul className="grid-index">
           { artistIndexItems }
         </ul>
       </div>

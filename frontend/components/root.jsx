@@ -43,7 +43,7 @@ const Root = ({ store }) => {
 
   return (
     <Provider store={ store }>
-      <Router history={ hashHistory }>
+      <Router history={ hashHistory }gs>
 
         <Route path="/">
           <IndexRoute onEnter={ _redirect } />

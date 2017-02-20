@@ -1,0 +1,14 @@
+.grid-index {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.grid-index-item {
+  margin: 10px;
+}
+
+.grid-index-item a {
+  display: block;
+  width: 200px;
+  height: 200px;
+}

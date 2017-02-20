@@ -9,7 +9,8 @@ span, article, footer, time, small {
   padding: 0;
   border: 0;
   outline: 0;
-  font: inherit;
+  font-size: inherit;
+  font-weight: inherit;
   font-family: "proxima nova", sans-serif;
   color: inherit;
   text-align: inherit;
@@ -40,7 +41,6 @@ ul {
 img {
   display: block;
   width: 100%;
-  height: auto;
 }
 
 input[type="password"],

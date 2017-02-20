@@ -11,7 +11,7 @@ const AlbumIndex = ({ albums }) => {
   });
 
   return (
-    <ul>
+    <ul className="grid-index">
       { albumIndexItems }
     </ul>
   );
