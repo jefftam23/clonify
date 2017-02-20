@@ -1,9 +1,14 @@
 import React from 'react';
 
-const SongRow = ({ song: { name } }) => {
+const SongRow = ({ song, fetchSongDetails }) => {
   return (
     <tr>
-      <td>{ name }</td>
+      <td>
+        <button
+          onClick={ () => fetchSongDetails( song.id ) }>PLAY
+        </button>
+      </td>
+      <td>{ song.name }</td>
     </tr>
   );
 };

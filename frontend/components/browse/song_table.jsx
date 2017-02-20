@@ -4,10 +4,14 @@ import SongRow from './song_row';
 
 const SongTable = (props) => {
   const songs = values(props.songs);
+  const fetchSongDetails = props.fetchSongDetails;
 
   const songRows = songs.map((song, idx) => {
     return (
-      <SongRow song={ song } key={ idx } />
+      <SongRow
+        song={ song }
+        key={ idx }
+        fetchSongDetails={ fetchSongDetails } />
     );
   });
 
@@ -15,6 +19,7 @@ const SongTable = (props) => {
     <table>
       <tbody>
         <tr>
+          <th></th>
           <th>Song</th>
         </tr>
         {

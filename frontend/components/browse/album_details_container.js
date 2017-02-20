@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import AlbumDetails from './album_details';
 import { fetchAlbumDetails } from '../../actions/album_actions';
+import { fetchSongDetails } from '../../actions/song_actions';
 
 const mapStateToProps = (state, ownProps) => {
   return {
@@ -10,9 +11,8 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
-    fetchAlbumDetails: (albumId) => {
-      return dispatch(fetchAlbumDetails(albumId));
-    }
+    fetchAlbumDetails: (albumId) => dispatch(fetchAlbumDetails(albumId)),
+    fetchSongDetails: (songId) => dispatch(fetchSongDetails(songId))
   };
 };
 

@@ -15,6 +15,6 @@ const AudioPlayer = ({ nowPlaying }) => {
       <div className="no-current-song"></div>
     );
   }
-}
+};
 
 export default AudioPlayer;
