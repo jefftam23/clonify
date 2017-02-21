@@ -5,10 +5,39 @@
 
 .grid-index-item {
   margin: 10px;
+  background: $dark-slate-gray;
 }
 
-.grid-index-item a {
+.index-item-pic {
+  opacity: 1;
   display: block;
   width: 200px;
   height: 200px;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.index-item-pic img {
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.index-item-pic img:hover {
+  opacity: 0.5;
+}
+
+.index-item-details {
+  font-size: 14px;
+  margin: 0 auto;
+  width: 150px;
+  padding: 15px 0;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.index-item-details a:hover {
+  text-decoration: underline;
 }

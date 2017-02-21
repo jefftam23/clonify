@@ -4,8 +4,13 @@ import { Link } from 'react-router';
 const AlbumIndexItem = ({ album: { id, name, imageUrl } }) => {
   return (
     <li className="grid-index-item">
-      <Link to={ `/albums/${id}` }><img src={ imageUrl } /></Link>
-      <p>{ name }</p>
+      <Link className="index-item-pic" to={ `/albums/${id}` }>
+        <img src={ imageUrl } />
+      </Link>
+
+      <div className="index-item-details">
+        <Link to={ `/albums/${id}` }>{ name }</Link>
+      </div>
     </li>
   );
 };

@@ -2,10 +2,11 @@ import React from 'react';
 
 const SongRow = ({ song, fetchSongDetails }) => {
   return (
-    <tr>
+    <tr className="song-row">
       <td>
         <button
-          onClick={ () => fetchSongDetails( song.id ) }>PLAY
+          className="play-button-cell"
+          onClick={ () => fetchSongDetails( song.id ) }>
         </button>
       </td>
       <td>{ song.name }</td>

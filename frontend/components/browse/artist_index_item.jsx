@@ -5,8 +5,13 @@ const ArtistIndexItem = ({ artist: { id, name, imageUrl } }) => {
 
   return (
     <li className="grid-index-item">
-      <Link to={ `/artists/${id}` }><img src={ imageUrl } /></Link>
-      <p>{ name }</p>
+      <Link className="index-item-pic" to={ `/artists/${id}` }>
+        <img src={ imageUrl } />
+      </Link>
+
+      <div className="index-item-details">
+        <Link to={ `/artists/${id}` }>{ name }</Link>
+      </div>
     </li>
   );
 };

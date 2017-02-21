@@ -16,9 +16,9 @@ const SongTable = (props) => {
   });
 
   return (
-    <table>
+    <table className="song-table">
       <tbody>
-        <tr>
+        <tr className="st-header-row">
           <th></th>
           <th>Song</th>
         </tr>
