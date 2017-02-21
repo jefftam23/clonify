@@ -68,7 +68,6 @@ class SongControls extends React.Component {
 
   formatTime(seconds) {
     let minutes = Math.floor(seconds / 60);
-    minutes = (minutes >= 10) ? minutes : "0" + minutes;
     seconds = Math.floor(seconds % 60);
     seconds = (seconds >= 10) ? seconds : "0" + seconds;
     return minutes + ":" + seconds;
@@ -109,11 +108,17 @@ class SongControls extends React.Component {
           </span>
         </p>
 
-        <button
-          className="toggle-play-button"
-          onClick={ this.togglePlay }>
-          { this.state.playing ? "Pause" : "Play" }
-        </button>
+        <div className="controls-wrapper">
+          <button
+            className="toggle-play-button"
+            onClick={ this.togglePlay }>
+            <img
+              src={
+                this.state.playing ?
+                window.images.pause :
+                window.images.play } />
+          </button>
+        </div>
       </div>
     );
   }

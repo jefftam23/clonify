@@ -6,14 +6,17 @@ const NowPlaying = ({ nowPlaying }) => {
 
   return (
     <div className="now-playing">
-      <Link to={ `/albums/${albumId}` }>
+      <Link className="np-album" to={ `/albums/${albumId}` }>
         <img src={ albumImageUrl }/>
       </Link>
 
-      <h3>{ name }</h3>
+      <h3 className="np-song">{ name }</h3>
 
-      <Link to={ `/artists/${artistId}` }>{ artistName }
-      </Link>
+      <div className="np-artist-wrapper">
+        <Link className="np-artist" to={ `/artists/${artistId}` }>
+          { artistName }
+        </Link>
+      </div>
     </div>
   );
 };
