@@ -26,7 +26,7 @@ const MainNav = ({ logout, currentUser }) => {
             </li>
 
             <li className="your-music-nav">
-              <Link to="/browse">
+              <Link to="/your-music">
                 <img src={ window.images.yourMusicIcon } />
                 <p className="nav-item-text">Your Music</p>
               </Link>
