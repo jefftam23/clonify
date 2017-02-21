@@ -6,6 +6,7 @@ import { fetchSongDetails } from '../../actions/song_actions';
 const mapStateToProps = (state, ownProps) => {
   return {
     albumDetails: state.albumDetails,
+    loading: state.loading.albumDetailsLoading
   };
 };
 
