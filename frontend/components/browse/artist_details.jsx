@@ -1,6 +1,7 @@
 import React from 'react';
 import ArtistHeader from './artist_header';
 import AlbumIndexContainer from './album_index_container';
+import LoadingIcon from '../loading_icon';
 
 class ArtistDetails extends React.Component {
   componentDidMount() {
@@ -15,6 +16,15 @@ class ArtistDetails extends React.Component {
 
   render() {
     const { name, imageUrl, albums } = this.props.artistDetails;
+
+    if (this.props.loading) {
+      return (
+        <div className="main-content">
+          <LoadingIcon />
+        </div>
+      );
+    }
+
     return (
       <div className="main-content">
         <ArtistHeader name={ name } imageUrl={ imageUrl }/>

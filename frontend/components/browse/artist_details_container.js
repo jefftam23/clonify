@@ -4,7 +4,8 @@ import { fetchArtistDetails } from '../../actions/artist_actions';
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    artistDetails: state.artistDetails
+    artistDetails: state.artistDetails,
+    loading: state.loading.artistDetailsLoading
   };
 };
 
