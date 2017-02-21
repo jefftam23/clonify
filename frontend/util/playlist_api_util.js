@@ -4,3 +4,11 @@ export const fetchUserPlaylists = (userId) => {
     url: `/api/users/${userId}/playlists`
   });
 };
+
+export const createUserPlaylist = (userId, playlist) => {
+  return $.ajax({
+    type: 'POST',
+    url: `/api/users/${userId}/playlists`,
+    data: { playlist }
+  });
+};
