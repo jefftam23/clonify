@@ -1,28 +1,17 @@
 import { connect } from 'react-redux';
 import YourMusic from './your_music';
-
-const fakeMusicPlaylists = {
-  1: {
-    name: 'playlist 1'
-  },
-  2: {
-    name: 'playlist 2'
-  },
-  3: {
-    name: 'playlist 3'
-  },
-};
+import { fetchUserPlaylists } from '../../actions/playlist_actions';
 
 const mapStateToProps = (state) => {
   return {
-    // playlists: this.state.yourMusicPlaylists
-    playlists: fakeMusicPlaylists
+    playlists: state.yourMusicPlaylists,
+    currentUser: state.session.currentUser
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
-
+    fetchUserPlaylists: (id) => dispatch(fetchUserPlaylists(id))
   };
 };
 
