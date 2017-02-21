@@ -3,16 +3,20 @@ import { Link } from 'react-router';
 
 const AlbumHeader = ({ name, imageUrl, artist }) => {
   return (
-    <div>
-      <h1>Album</h1>
-      <h2>{ name }</h2>
-      {
-        <p>By
+    <div className="artist-album-header">
+      <div className="header-img-wrapper">
+        <img src={ imageUrl } />
+      </div>
+
+      <div className="artist-album-h-details">
+        <span>Album</span>
+        <h1>{ name }</h1>
+        <h2>By&nbsp;
           <Link to={`/artists/${ artist ? artist.id : "" }`}>
-            { artist ? " " + artist.name : "" }
+            { artist ? artist.name : "" }
           </Link>
-        </p>
-      }
+        </h2>
+      </div>
     </div>
   );
 };

@@ -15,9 +15,7 @@ class Browse extends React.Component {
 
     return (
       <div className="main-content">
-        <h1>BROWSE ARTISTS</h1>
-
-        <h2>Hello { (currentUser) ? currentUser.username : "" }!</h2>
+        <h1>Artists</h1>
 
         <ArtistIndexContainer />
       </div>

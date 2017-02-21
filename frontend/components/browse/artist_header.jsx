@@ -2,10 +2,15 @@ import React from 'react';
 
 const ArtistHeader = ({ name, imageUrl }) => {
   return (
-    <div className="artist-header">
-      <img src={ imageUrl } />
-      <h2>Artist</h2>
-      <h3>{ name }</h3>
+    <div className="artist-album-header">
+      <div className="header-img-wrapper">
+        <img src={ imageUrl } />
+      </div>
+      
+      <div className="artist-album-h-details">
+        <span>Artist</span>
+        <h1>{ name }</h1>
+      </div>
     </div>
   );
 };
