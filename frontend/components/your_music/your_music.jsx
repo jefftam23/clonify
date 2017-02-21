@@ -1,12 +1,13 @@
 import React from 'react';
+import EditablePlaylistList from './editable_playlist_list';
 
-const YourMusic = () => {
+const YourMusic = ({ playlists }) => {
   return (
     <div className="main-content">
       <h1>Your Music</h1>
-      
+
+      <EditablePlaylistList playlists={ playlists } />
       {
-        // <EditablePlaylistList />
         // <PlaylistDetailsContainer />
       }
     </div>
