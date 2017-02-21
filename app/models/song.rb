@@ -31,4 +31,7 @@ class Song < ActiveRecord::Base
 
   belongs_to :album
   has_one :artist, through: :album
+
+  has_many :playlist_listings, dependent: :destroy
+  has_many :playlists, through: :playlist_listings
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170221184457) do
+ActiveRecord::Schema.define(version: 20170221201331) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,6 +35,16 @@ ActiveRecord::Schema.define(version: 20170221184457) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+  end
+
+  create_table "playlist_listings", force: :cascade do |t|
+    t.integer  "playlist_id", null: false
+    t.integer  "song_id",     null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["playlist_id", "song_id"], name: "index_playlist_listings_on_playlist_id_and_song_id", unique: true, using: :btree
+    t.index ["playlist_id"], name: "index_playlist_listings_on_playlist_id", using: :btree
+    t.index ["song_id"], name: "index_playlist_listings_on_song_id", using: :btree
   end
 
   create_table "playlists", force: :cascade do |t|
