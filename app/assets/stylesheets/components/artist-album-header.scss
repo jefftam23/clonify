@@ -1,4 +1,4 @@
-.artist-album-header {
+.details-header {
   width: 100%;
   background: $dark-slate-gray;
   display: flex;
@@ -10,40 +10,40 @@
   height: 130px;
 }
 
-.artist-album-header img {
+.details-header img {
   height: 100%;
   object-fit: cover;
   overflow: hidden;
 }
 
-.artist-album-h-details {
+.details-header-info {
   margin: 15px 15px 15px 0;
 }
 
-.artist-album-h-details span {
+.details-header-info span {
   text-transform: uppercase;
   color: #88898c;
   letter-spacing: 1px;
   font-size: 12px;
 }
 
-.artist-album-h-details h1 {
+.details-header-info h1 {
   font-family: "proxima nova light", sans-serif;
   font-size: 32px;
   line-height: 36px;
   margin: 5px 0;
 }
 
-.artist-album-h-details h2 {
+.details-header-info h2 {
   color: #88898c;
 }
 
-.artist-album-h-details a {
+.details-header-info a {
   opacity: 0.9;
   color: white;
 }
 
-.artist-album-h-details a:hover {
+.details-header-info a:hover {
   opacity: 1;
   text-decoration: underline;
 }

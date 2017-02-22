@@ -3,12 +3,12 @@ import { Link } from 'react-router';
 
 const AlbumHeader = ({ name, imageUrl, artist }) => {
   return (
-    <div className="artist-album-header">
+    <div className="details-header">
       <div className="header-img-wrapper">
         <img src={ imageUrl } />
       </div>
 
-      <div className="artist-album-h-details">
+      <div className="details-header-info">
         <span>Album</span>
         <h1>{ name }</h1>
         <h2>By&nbsp;

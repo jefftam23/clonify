@@ -1,6 +1,6 @@
 import React from 'react';
 import AlbumHeader from './album_header';
-import SongTable from './song_table';
+import SongTable from '../song_table';
 import LoadingIcon from '../loading_icon';
 
 class AlbumDetails extends React.Component {
