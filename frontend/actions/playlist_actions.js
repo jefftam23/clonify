@@ -40,6 +40,13 @@ export const updatePlaylist = (playlist) => {
   };
 };
 
+export const createPlaylistListing = (playlistListing) => {
+  return (dispatch) => {
+    return PlaylistApiUtil.createPlaylistListing(playlistListing)
+      .then(playlistDetails => dispatch(receivePlaylistDetails(playlistDetails)));
+  };
+};
+
 export const receivePlaylists = (playlists) => {
   return {
     type: RECEIVE_PLAYLISTS,

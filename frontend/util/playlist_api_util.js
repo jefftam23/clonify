@@ -34,3 +34,11 @@ export const updatePlaylist = (playlist) => {
     data: { playlist }
   });
 };
+
+export const createPlaylistListing = (playlistListing) => {
+  return $.ajax({
+    type: 'POST',
+    url: '/api/playlist_listings',
+    data: { playlistListing }
+  });
+};
