@@ -1,4 +1,6 @@
 class Api::PlaylistsController < ApplicationController
+  before_filter :require_authorization, only: [:update, :destroy]
+
   def index
     @playlists = current_user.playlists
     render :index
@@ -29,5 +31,12 @@ class Api::PlaylistsController < ApplicationController
 
   def playlist_params
     params.require(:playlist).permit(:name, :owner_id)
+  end
+
+  def require_authorization
+    if current_user != Playlist.find(params[:id]).owner
+      message = "You do not have permission to edit or delete this playlist!"
+      render json: message, status: 403
+    end
   end
 end
