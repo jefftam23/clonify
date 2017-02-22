@@ -5,11 +5,13 @@ import PlaylistListItem from './playlist_list_item';
 class EditablePlaylistList extends React.Component {
   render() {
     const playlists = values(this.props.playlists);
+    const { fetchPlaylistDetails } = this.props;
 
     const playlistListItems = playlists.map((playlist, idx) => {
       return (
         <PlaylistListItem
           playlist={ playlist }
+          fetchPlaylistDetails={ fetchPlaylistDetails }
           key={ idx } />
       );
     });
