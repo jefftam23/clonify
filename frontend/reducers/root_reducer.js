@@ -7,6 +7,7 @@ import ArtistDetailsReducer from './artist_details_reducer';
 import AlbumDetailsReducer from './album_details_reducer';
 import NowPlayingReducer from './now_playing_reducer';
 import YourMusicPlaylistsReducer from './your_music_playlists_reducer';
+import PlaylistDetailsReducer from './playlist_details_reducer';
 
 const RootReducer = combineReducers({
   session: SessionReducer,
@@ -15,7 +16,8 @@ const RootReducer = combineReducers({
   artistDetails: ArtistDetailsReducer,
   albumDetails: AlbumDetailsReducer,
   nowPlaying: NowPlayingReducer,
-  yourMusicPlaylists: YourMusicPlaylistsReducer
+  yourMusicPlaylists: YourMusicPlaylistsReducer,
+  playlistDetails: PlaylistDetailsReducer
 });
 
 export default RootReducer;

@@ -1,6 +1,7 @@
 import * as PlaylistApiUtil from '../util/playlist_api_util';
 
 export const RECEIVE_PLAYLISTS = "RECEIVE_PLAYLISTS";
+export const RECEIVE_PLAYLIST_DETAILS = "RECEIVE_PLAYLIST_DETAILS";
 export const RECEIVE_SINGLE_PLAYLIST = "RECEIVE_SINGLE_PLAYLIST";
 export const REMOVE_SINGLE_PLAYLIST = "REMOVE_SINGLE_PLAYLIST";
 
@@ -8,6 +9,13 @@ export const fetchPlaylists = () => {
   return (dispatch) => {
     return PlaylistApiUtil.fetchPlaylists()
       .then(playlists => dispatch(receivePlaylists(playlists)));
+  };
+};
+
+export const fetchPlaylistDetails = (id) => {
+  return (dispatch) => {
+    return PlaylistApiUtil.fetchPlaylistDetails(id)
+      .then(playlistDetails => dispatch(receivePlaylistDetails(playlistDetails)));
   };
 };
 
@@ -36,6 +44,13 @@ export const receivePlaylists = (playlists) => {
   return {
     type: RECEIVE_PLAYLISTS,
     playlists
+  };
+};
+
+export const receivePlaylistDetails = (playlistDetails) => {
+  return {
+    type: RECEIVE_PLAYLIST_DETAILS,
+    playlistDetails
   };
 };
 
