@@ -10,14 +10,15 @@ class PlaylistDetails extends React.Component {
   }
 
   render() {
-    const { playlistDetails: { name, songs } } = this.props;
+    const { playlistDetails: { name, imageUrl, songs } } = this.props;
     const { fetchSongDetails } = this.props;
 
     return (
       <div className="playlist-details">
         I'm the playlist details container
         <PlaylistHeader
-          name={ name }/>
+          name={ name }
+          imageUrl={ imageUrl } />
         <SongTable
           songs={ songs }
           fetchSongDetails={ fetchSongDetails } />
