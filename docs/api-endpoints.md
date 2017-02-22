@@ -40,13 +40,13 @@
   - get all the albums that belong to this artist
 
 ### Playlists
-- `GET /api/users/:id/playlists`
-  - get all of the playlists that this user owns but does not follow
-- `POST /api/users/:id/playlists`
-- `PATCH /api/users/:id/playlists`
-- `DELETE /api/users/:id/playlists`
+- `GET /api/playlists`
+  - get all of the current user's playlists
+- `POST /api/playlists`
+- `PATCH /api/playlists/:id`
+- `DELETE /api/playlists/:id`
   - **NOTE:** need to protect against users modifying other users' playlists
-- `GET /api/users/:id/playlists/:id`
+- `GET /api/playlists/:id`
 
 
 ### Follows
