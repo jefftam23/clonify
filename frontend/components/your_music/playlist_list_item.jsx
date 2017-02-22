@@ -8,6 +8,7 @@ const PlaylistListItem = ({ playlist, fetchPlaylistDetails }) => {
         // and trigger a re-render of the SongTable
       }
       <button onClick={ () => fetchPlaylistDetails(playlist.id) }>
+        <img src={ playlist.imageUrl } />
         <span>{ playlist.name }</span>
       </button>
     </li>
