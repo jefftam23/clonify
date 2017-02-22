@@ -1,6 +1,6 @@
 import {
-  RECEIVE_PLAYLISTS } from '../actions/playlist_actions';
-  // RECEIVE_SINGLE_USER_PLAYLIST,
+  RECEIVE_PLAYLISTS,
+  RECEIVE_SINGLE_PLAYLIST } from '../actions/playlist_actions';
   // REMOVE_SINGLE_USER_PLAYLIST } from '../actions/playlist_actions';
 import merge from 'lodash/merge';
 
@@ -11,8 +11,8 @@ const YourMusicPlaylistsReducer = (oldState = {}, action) => {
     case RECEIVE_PLAYLISTS:
       return action.playlists;
 
-    // case RECEIVE_SINGLE_USER_PLAYLIST:
-    //   return merge({}, oldState, { [action.playlist.id]: action.playlist });
+    case RECEIVE_SINGLE_PLAYLIST:
+      return merge({}, oldState, { [action.playlist.id]: action.playlist });
     //
     // case REMOVE_SINGLE_USER_PLAYLIST:
     //   let newState = merge({}, oldState);
