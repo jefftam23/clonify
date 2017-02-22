@@ -13,6 +13,12 @@ class Api::PlaylistsController < ApplicationController
     end
   end
 
+  def destroy
+    @playlist = Playlist.find(params[:id])
+    @playlist.destroy!
+    render :show
+  end
+
   private
 
   def playlist_params

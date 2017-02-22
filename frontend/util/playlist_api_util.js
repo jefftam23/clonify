@@ -12,3 +12,10 @@ export const createUserPlaylist = (userId, playlist) => {
     data: { playlist }
   });
 };
+
+export const deleteUserPlaylist = (userId, playlistId) => {
+  return $.ajax({
+    type: 'DELETE',
+    url: `/api/users/${userId}/playlists/${playlistId}`
+  });
+};
