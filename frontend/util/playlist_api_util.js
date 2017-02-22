@@ -42,3 +42,10 @@ export const createPlaylistListing = (playlistListing) => {
     data: { playlistListing }
   });
 };
+
+export const deletePlaylistListing = (id) => {
+  return $.ajax({
+    type: 'DELETE',
+    url: `/api/playlist_listings/${id}`
+  });
+};

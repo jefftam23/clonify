@@ -40,9 +40,18 @@ export const updatePlaylist = (playlist) => {
   };
 };
 
+// Add song to playlist
 export const createPlaylistListing = (playlistListing) => {
   return (dispatch) => {
     return PlaylistApiUtil.createPlaylistListing(playlistListing)
+      .then(playlistDetails => dispatch(receivePlaylistDetails(playlistDetails)));
+  };
+};
+
+// Remove song from playlist
+export const deletePlaylistListing = (id) => {
+  return (dispatch) => {
+    return PlaylistApiUtil.deletePlaylistListing(id)
       .then(playlistDetails => dispatch(receivePlaylistDetails(playlistDetails)));
   };
 };

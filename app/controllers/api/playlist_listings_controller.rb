@@ -10,6 +10,10 @@ class Api::PlaylistListingsController < ApplicationController
   end
 
   def destroy
+    playlist_listing = PlaylistListing.find(params[:id])
+    @playlist = playlist_listing.playlist
+    playlist_listing.destroy!
+    render 'api/playlists/show.json.jbuilder'
   end
 
   private
