@@ -6,6 +6,11 @@ class Api::PlaylistsController < ApplicationController
     render :index
   end
 
+  def show
+    @playlist = Playlist.find(params[:id])
+    render :show
+  end
+
   def create
     @playlist = Playlist.new(playlist_params)
     @playlist.owner = current_user
