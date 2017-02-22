@@ -2,7 +2,7 @@ import * as PlaylistApiUtil from '../util/playlist_api_util';
 
 export const RECEIVE_PLAYLISTS = "RECEIVE_PLAYLISTS";
 export const RECEIVE_SINGLE_PLAYLIST = "RECEIVE_SINGLE_PLAYLIST";
-// export const REMOVE_SINGLE_USER_PLAYLIST = "REMOVE_SINGLE_USER_PLAYLIST";
+export const REMOVE_SINGLE_PLAYLIST = "REMOVE_SINGLE_PLAYLIST";
 
 export const fetchPlaylists = () => {
   return (dispatch) => {
@@ -17,13 +17,13 @@ export const createPlaylist = (playlist) => {
       .then(respPlaylist => dispatch(receiveSinglePlaylist(respPlaylist)));
   };
 };
-//
-// export const deleteUserPlaylist = (userId, playlistId) => {
-//   return (dispatch) => {
-//     return PlaylistApiUtil.deleteUserPlaylist(userId, playlistId)
-//       .then(playlist => dispatch(removeSingleUserPlaylist(playlist)));
-//   };
-// };
+
+export const deletePlaylist = (playlistId) => {
+  return (dispatch) => {
+    return PlaylistApiUtil.deletePlaylist(playlistId)
+      .then(playlist => dispatch(removeSinglePlaylist(playlist)));
+  };
+};
 
 export const receivePlaylists = (playlists) => {
   return {
@@ -31,17 +31,17 @@ export const receivePlaylists = (playlists) => {
     playlists
   };
 };
-//
+
 export const receiveSinglePlaylist = (playlist) => {
   return {
     type: RECEIVE_SINGLE_PLAYLIST,
     playlist
   };
 };
-//
-// export const removeSingleUserPlaylist = (playlist) => {
-//   return {
-//     type: REMOVE_SINGLE_USER_PLAYLIST,
-//     playlist
-//   };
-// };
+
+export const removeSinglePlaylist = (playlist) => {
+  return {
+    type: REMOVE_SINGLE_PLAYLIST,
+    playlist
+  };
+};
