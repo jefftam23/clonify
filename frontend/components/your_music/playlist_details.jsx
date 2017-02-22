@@ -19,9 +19,9 @@ class PlaylistDetails extends React.Component {
         <PlaylistHeader
           name={ name }
           imageUrl={ imageUrl } />
+
         <SongTable
-          songs={ songs }
-          fetchSongDetails={ fetchSongDetails } />
+          songs={ songs } />
       </div>
     );
   }

@@ -16,7 +16,6 @@ class AlbumDetails extends React.Component {
 
   render() {
     const { albumDetails: { name, imageUrl, artist, songs } } = this.props;
-    const { fetchSongDetails } = this.props;
 
     if (this.props.loading) {
       return (
@@ -34,9 +33,7 @@ class AlbumDetails extends React.Component {
           artist={ artist } />
 
         <SongTable
-          songs={ songs }
-          fetchSongDetails={ fetchSongDetails } />
-
+          songs={ songs } />
       </div>
     );
   }
