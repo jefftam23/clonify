@@ -19,11 +19,11 @@ export const deletePlaylist = (id) => {
     url: `/api/playlists/${id}`
   });
 };
-//
-// export const updateUserPlaylist = (userId, playlist) => {
-//   return $.ajax({
-//     type: 'PATCH',
-//     url: `/api/users/${userId}/playlists/${playlist.id}`,
-//     data: { playlist }
-//   });
-// };
+
+export const updatePlaylist = (playlist) => {
+  return $.ajax({
+    type: 'PATCH',
+    url: `/api/playlists/${playlist.id}`,
+    data: { playlist }
+  });
+};

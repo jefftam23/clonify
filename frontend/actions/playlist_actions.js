@@ -25,6 +25,13 @@ export const deletePlaylist = (playlistId) => {
   };
 };
 
+export const updatePlaylist = (playlist) => {
+  return (dispatch) => {
+    return PlaylistApiUtil.updatePlaylist(playlist)
+      .then(respPlaylist => dispatch(receiveSinglePlaylist(respPlaylist)));
+  };
+};
+
 export const receivePlaylists = (playlists) => {
   return {
     type: RECEIVE_PLAYLISTS,

@@ -25,6 +25,7 @@ class Api::PlaylistsController < ApplicationController
   def update
     @playlist = Playlist.find(params[:id])
     @playlist.update!(playlist_params)
+    render :show
   end
 
   private
