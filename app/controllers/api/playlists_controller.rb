@@ -1,6 +1,6 @@
 class Api::PlaylistsController < ApplicationController
   def index
-    @playlists = User.find(params[:user_id]).playlists
+    @playlists = current_user.playlists
     render :index
   end
 
@@ -17,6 +17,11 @@ class Api::PlaylistsController < ApplicationController
     @playlist = Playlist.find(params[:id])
     @playlist.destroy!
     render :show
+  end
+
+  def update
+    @playlist = Playlist.find(params[:id])
+    @playlist.update!(playlist_params)
   end
 
   private

@@ -3,12 +3,12 @@ import EditablePlaylistList from './editable_playlist_list';
 
 class YourMusic extends React.Component {
   componentDidMount() {
-    const { fetchUserPlaylists, currentUser } = this.props;
-    fetchUserPlaylists(currentUser.id);
+    const { fetchPlaylists, currentUser } = this.props;
+    fetchPlaylists();
   }
 
   render() {
-    const { playlists, fetchUserPlaylists } = this.props;
+    const { playlists, fetchPlaylists } = this.props;
 
     return (
       <div className="main-content">
