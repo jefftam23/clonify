@@ -2,15 +2,22 @@
 #
 # Table name: playlists
 #
-#  id         :integer          not null, primary key
-#  name       :string           not null
-#  owner_id   :integer          not null
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
+#  id                 :integer          not null, primary key
+#  name               :string           not null
+#  owner_id           :integer          not null
+#  created_at         :datetime         not null
+#  updated_at         :datetime         not null
+#  image_file_name    :string
+#  image_content_type :string
+#  image_file_size    :integer
+#  image_updated_at   :datetime
 #
 
 class Playlist < ActiveRecord::Base
   validates :name, :owner, presence: true
+
+  has_attached_file :image, default_url: "playlist-default.png"
+  validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
   belongs_to :owner,
     class_name: 'User',
