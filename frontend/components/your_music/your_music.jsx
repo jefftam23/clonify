@@ -22,7 +22,7 @@ class YourMusic extends React.Component {
           <EditablePlaylistList
             playlists={ playlists }
             fetchPlaylistDetails={ fetchPlaylistDetails } />
-            
+
           <PlaylistDetails
             playlistDetails={ playlistDetails }
             fetchSongDetails={ fetchSongDetails } />
