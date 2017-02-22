@@ -13,6 +13,7 @@ SONGS = 'songs'
 Artist.destroy_all
 Album.destroy_all
 Song.destroy_all
+Playlist.destroy_all
 
 guest = User.create({ username: 'guest', password: 'password' })
 
@@ -63,4 +64,22 @@ songs = [
 
 songs.each do |attributes|
   Song.create!(attributes)
+end
+
+playlist1 = Playlist.create!({name: 'Cool Playlist', owner_id: 1})
+playlist2 = Playlist.create!({name: 'Another one', owner_id: 1})
+playlist3 = Playlist.create!({name: 'The Third', owner_id: 1})
+
+playlist_listings = [
+  {playlist_id: playlist1.id, song_id: Song.find_by_name('In the Garage').id},
+  {playlist_id: playlist1.id, song_id: Song.find_by_name('Say It Ain\'t So').id},
+  {playlist_id: playlist1.id, song_id: Song.find_by_name('The Good Life').id},
+  {playlist_id: playlist2.id, song_id: Song.find_by_name('Better Together').id},
+  {playlist_id: playlist2.id, song_id: Song.find_by_name('Only in Dreams').id},
+  {playlist_id: playlist3.id, song_id: Song.find_by_name('No Other Way').id},
+  {playlist_id: playlist3.id, song_id: Song.find_by_name('Do You Remember').id},
+]
+
+playlist_listings.each do |attributes|
+  PlaylistListing.create!(attributes)
 end
