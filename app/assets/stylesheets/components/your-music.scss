@@ -5,6 +5,7 @@
 
 .your-music-playlists-wrapper {
   width: 33.3333333333%;
+  max-width: 315px;
   margin: 5px;
   border: 1px solid red;
   display: block;
@@ -86,6 +87,7 @@
 }
 
 .playlist-list-item img {
+  display: block;
   width: 50px;
   height: 50px;
   margin-left: 10px;
@@ -101,7 +103,3 @@
 }
 
 /** Playlist Details **/
-
-.playlist-details {
-  width: 550px;
-}

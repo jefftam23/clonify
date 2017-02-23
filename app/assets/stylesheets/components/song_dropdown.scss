@@ -1,35 +1,64 @@
 .song-dropdown {
-  display: block;
-}
-
-.song-dropdown > li {
-  // background: url(../../assets/images/song.png);
-  background: red;
-  background-repeat: no-repeat;
-  background-size: 50px 50px;
-  width: 50px;
-  height: 50px;
   position: relative;
-  cursor: pointer;
 }
 
-.song-dropdown ul {
-  display: none;
+.song-dropdown > button {
+  opacity: 0.7;
+  display: block;
+  height: 20px;
+  width: 20px;
+  font-weight: bold;
+  // background: brown;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.song-dropdown > button:hover {
+  opacity: 1;
+}
+
+.song-dropdown > ul {
+  display: block;
   position: absolute;
-  top: 50px;
-  left: 0;
-  flex-direction: column;
-  cursor: pointer;
-  box-shadow: black 5px 5px 10px;
+  z-index: 9002;
+  top: 25px;
+  left: -110px;
+  background: #3e3e40;
+  width: 220px;
 }
 
-/* This is how we create pure css dropdown effects. No JS required. */
-.song-dropdown:hover ul {
+.song-dropdown li {
+  color: #adaeb3;
+  font-weight: 400;
+  line-height: 20px;
+  border-top: 1px solid #27282b;
+  height: 35px;
+}
+
+.song-dropdown li:first-child {
+  border: none;
+}
+
+.song-dropdown li:last-child {
+  border-top: 1px solid white;
+}
+
+.song-dropdown li:hover {
+  background: #2e2f33;
+}
+
+.song-dropdown li > button {
+  // padding: 10px 15px;
+  width: 100%;
+  height: 100%;
   display: flex;
-  z-index: 1;
-  background: blue;
+  align-items: center;
 }
 
-.song-dropdown ul li:hover a {
-  text-decoration: underline;
+.song-dropdown span {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-left: 15px;
+  margin-right: 15px
 }
