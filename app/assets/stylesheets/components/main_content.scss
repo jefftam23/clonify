@@ -6,23 +6,23 @@
   overflow-y: scroll;
 }
 
-body::-webkit-scrollbar {
+::-webkit-scrollbar {
   display: none;
 }
 
-::-webkit-scrollbar {
-  display: block;
-  background-color: $dark-gray;
-  width: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-  display: block;
-  background-color: #323438;
-  border-radius: 10px;
-  border: 1px solid transparent;
-  background-clip: content-box;
-}
+// ::-webkit-scrollbar {
+//   display: block;
+//   background-color: $dark-gray;
+//   width: 10px;
+// }
+//
+// ::-webkit-scrollbar-thumb {
+//   display: block;
+//   background-color: #323438;
+//   border-radius: 10px;
+//   border: 1px solid transparent;
+//   background-clip: content-box;
+// }
 
 .main-content > h1 {
   font-family: "proxima nova light", sans-serif;
