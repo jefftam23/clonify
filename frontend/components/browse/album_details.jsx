@@ -2,6 +2,7 @@ import React from 'react';
 import AlbumHeader from './album_header';
 import SongTable from '../song_table';
 import LoadingIcon from '../loading_icon';
+import { Link } from 'react-router';
 
 class AlbumDetails extends React.Component {
   componentDidMount() {

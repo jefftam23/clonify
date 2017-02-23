@@ -1,5 +1,6 @@
 import React from 'react';
 import SongDropdown from './song_dropdown';
+import { Link } from 'react-router';
 
 const SongRow = ({ song,
                    playlists,
@@ -7,6 +8,14 @@ const SongRow = ({ song,
                    deletePlaylistListing,
                    createPlaylistListing,
                    playlistView }) => {
+
+  const formatTime = (seconds) => {
+    let minutes = Math.floor(seconds / 60);
+    seconds = Math.floor(seconds % 60);
+    seconds = (seconds >= 10) ? seconds : "0" + seconds;
+    return minutes + ":" + seconds;
+  };
+
   return (
     <tr className="song-row">
       <td>
@@ -19,6 +28,14 @@ const SongRow = ({ song,
       <td>{ song.name }</td>
 
       <td>
+        <Link to={ `/artists/${song.artistId}` }>{ song.artistName }</Link>
+      </td>
+
+      <td>
+        <Link to={ `/albums/${song.albumId}` }>{ song.albumName }</Link>
+      </td>
+
+      <td>
         <SongDropdown
           songId={ song.id }
           listingId={ song.listingId }
@@ -28,6 +45,8 @@ const SongRow = ({ song,
           createPlaylistListing={ createPlaylistListing }
           playlistView={ playlistView } />
       </td>
+
+      <td>{ formatTime(song.duration) }</td>
     </tr>
   );
 };

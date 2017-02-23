@@ -36,7 +36,10 @@ class SongTable extends React.Component {
           <tr className="st-header-row">
             <th></th>
             <th>Song</th>
+            <th>Artist</th>
+            <th>Album</th>
             <th></th>
+            <th>Time</th>
           </tr>
           {
             songRows
