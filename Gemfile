@@ -37,6 +37,8 @@ gem "paperclip", '~> 5.0.0'
 gem 'figaro'
 gem 'aws-sdk', '>= 2.0'
 
+gem 'ruby-mp3info', require: 'mp3info'
+
 group :production, :development, :test do
   gem 'pry-rails'
 end

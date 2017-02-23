@@ -5,8 +5,9 @@ if @playlist.songs.empty?
 else
   json.songs do
     @playlist.playlist_listings.each do |listing|
-      json.set! listing.song.id do
-        json.extract! listing.song, :id, :name
+      song = listing.song
+      json.set! song.id do
+        json.partial! 'api/songs/song', song: song
         json.listingId listing.id
       end
     end

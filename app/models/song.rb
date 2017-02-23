@@ -14,6 +14,8 @@
 #
 
 class Song < ActiveRecord::Base
+  before_validation :get_duration
+
   validates :name, :album, :artist, presence: true
 
   has_attached_file :audio
@@ -34,4 +36,14 @@ class Song < ActiveRecord::Base
 
   has_many :playlist_listings, dependent: :destroy
   has_many :playlists, through: :playlist_listings
+
+  private
+
+  def get_duration
+    path = audio.queued_for_write[:original].path
+    options = { :encoding => 'utf-8' }
+    Mp3Info.open(path, options) do |mp3info|
+      self.duration = mp3info.length.to_i
+    end
+  end
 end
