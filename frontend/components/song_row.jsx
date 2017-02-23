@@ -1,7 +1,12 @@
 import React from 'react';
 import SongDropdown from './song_dropdown';
 
-const SongRow = ({ song, fetchSongDetails, deletePlaylistListing, playlistView }) => {
+const SongRow = ({ song,
+                   playlists,
+                   fetchSongDetails,
+                   deletePlaylistListing,
+                   createPlaylistListing,
+                   playlistView }) => {
   return (
     <tr className="song-row">
       <td>
@@ -17,8 +22,10 @@ const SongRow = ({ song, fetchSongDetails, deletePlaylistListing, playlistView }
         <SongDropdown
           songId={ song.id }
           listingId={ song.listingId }
+          playlists={ playlists }
           fetchSongDetails={ fetchSongDetails }
           deletePlaylistListing={ deletePlaylistListing }
+          createPlaylistListing={ createPlaylistListing }
           playlistView={ playlistView } />
       </td>
     </tr>
