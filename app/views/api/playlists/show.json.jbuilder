@@ -4,9 +4,10 @@ if @playlist.songs.empty?
   json.songs({})
 else
   json.songs do
-    @playlist.songs.each do |song|
-      json.set! song.id do
-        json.extract! song, :id, :name
+    @playlist.playlist_listings.each do |listing|
+      json.set! listing.song.id do
+        json.extract! listing.song, :id, :name
+        json.listingId listing.id
       end
     end
   end
