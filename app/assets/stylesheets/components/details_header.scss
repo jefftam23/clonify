@@ -32,6 +32,9 @@
   font-size: 32px;
   line-height: 36px;
   margin: 5px 0;
+  white-space: pre;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .details-header-info h2 {

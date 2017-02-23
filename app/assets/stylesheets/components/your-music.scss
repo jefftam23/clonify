@@ -1,13 +1,13 @@
 .your-music-wrapper {
   display: flex;
   height: 100%;
+  border-top: 1px solid #222326;
 }
 
 .your-music-playlists-wrapper {
   width: 33.3333333333%;
   max-width: 315px;
   margin: 5px;
-  border: 1px solid red;
   display: block;
   overflow-y: scroll;
 }
@@ -103,3 +103,50 @@
 }
 
 /** Playlist Details **/
+
+.playlist-header {
+  background: black;
+}
+
+.playlist-header-img {
+  background: #222326;
+}
+
+.header-info-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.playlist-header-buttons {
+  margin-bottom: 15px;
+}
+
+.playlist-header-buttons button {
+  padding: 0 20px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 26px;
+  height: 28px;
+  max-height: 28px;
+  border-radius: 500px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.header-play-button {
+  background: $bright-green-no-hover;
+  margin-right: 15px;
+}
+
+.header-play-button:hover {
+  background: $bright-green-hover;
+}
+
+.header-delete-button {
+  background: #990000;
+}
+
+.header-delete-button:hover {
+  background: red;
+}

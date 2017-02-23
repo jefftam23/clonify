@@ -9,18 +9,16 @@ class PlaylistDetails extends React.Component {
   }
 
   render() {
-    const { playlistDetails: { name, imageUrl, songs } } = this.props;
-    const { fetchSongDetails } = this.props;
+    const { playlistDetails, deletePlaylist } = this.props;
 
     return (
       <div className="playlist-details">
-        I'm the playlist details container
         <PlaylistHeader
-          name={ name }
-          imageUrl={ imageUrl } />
+          playlistDetails={ playlistDetails }
+          deletePlaylist={ deletePlaylist } />
 
         <SongTable
-          songs={ songs }
+          songs={ playlistDetails.songs }
           playlistView="true" />
       </div>
     );

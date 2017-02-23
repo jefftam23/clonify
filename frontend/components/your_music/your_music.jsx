@@ -10,10 +10,11 @@ class YourMusic extends React.Component {
 
   render() {
     const { playlists,
-            fetchPlaylistDetails,
             playlistDetails,
+            fetchPlaylistDetails,
             createPlaylist,
-            receivePlaylistDetails } = this.props;
+            receivePlaylistDetails,
+            deletePlaylist } = this.props;
 
     return (
       <div className="main-content">
@@ -27,7 +28,9 @@ class YourMusic extends React.Component {
 
           <PlaylistDetails
             playlistDetails={ playlistDetails }
-            receivePlaylistDetails={ receivePlaylistDetails } />
+            receivePlaylistDetails={ receivePlaylistDetails }
+            currentUser={ currentUser }
+            deletePlaylist={ deletePlaylist } />
         </div>
       </div>
     );
