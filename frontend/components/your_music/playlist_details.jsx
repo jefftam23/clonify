@@ -3,10 +3,11 @@ import PlaylistHeader from './playlist_header';
 import SongTable from '../song_table';
 
 class PlaylistDetails extends React.Component {
-  componentDidMount() {
+  componentWillMount() {
     // if current user has at least one playlist,
     // fetch the most recent one and display it upon entering
     // the your-music page
+    // else, dispatch receiving empty playlist eetails
   }
 
   render() {

@@ -11,7 +11,8 @@ class YourMusic extends React.Component {
   render() {
     const { playlists,
             fetchPlaylistDetails,
-            playlistDetails } = this.props;
+            playlistDetails,
+            createPlaylist } = this.props;
 
     return (
       <div className="main-content">
@@ -20,7 +21,8 @@ class YourMusic extends React.Component {
         <div className="your-music-wrapper">
           <EditablePlaylistList
             playlists={ playlists }
-            fetchPlaylistDetails={ fetchPlaylistDetails } />
+            fetchPlaylistDetails={ fetchPlaylistDetails }
+            createPlaylist={ createPlaylist } />
 
           <PlaylistDetails
             playlistDetails={ playlistDetails } />

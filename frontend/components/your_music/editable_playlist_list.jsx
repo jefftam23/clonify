@@ -1,11 +1,12 @@
 import React from 'react';
 import { values } from 'lodash';
 import PlaylistListItem from './playlist_list_item';
+import PlaylistCreator from './playlist_creator';
 
 class EditablePlaylistList extends React.Component {
   render() {
     const playlists = values(this.props.playlists);
-    const { fetchPlaylistDetails } = this.props;
+    const { fetchPlaylistDetails, createPlaylist } = this.props;
 
     const playlistListItems = playlists.map((playlist, idx) => {
       return (
@@ -18,12 +19,11 @@ class EditablePlaylistList extends React.Component {
 
     return (
       <div className="your-music-playlists-wrapper">
-        <ul className="your-music-playlists">
-        {
-          // <PlaylistCreator />
-        }
+        <PlaylistCreator
+          createPlaylist={ createPlaylist }/>
 
-        { playlistListItems }
+        <ul className="your-music-playlists">
+          { playlistListItems }
         </ul>
       </div>
     );
