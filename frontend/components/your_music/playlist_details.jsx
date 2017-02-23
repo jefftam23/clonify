@@ -21,7 +21,8 @@ class PlaylistDetails extends React.Component {
           imageUrl={ imageUrl } />
 
         <SongTable
-          songs={ songs } />
+          songs={ songs }
+          playlistView="true" />
       </div>
     );
   }

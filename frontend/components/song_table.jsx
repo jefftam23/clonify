@@ -3,18 +3,20 @@ import { connect } from 'react-redux';
 import { values } from 'lodash';
 import SongRow from './song_row';
 import { fetchSongDetails } from '../actions/song_actions';
+import { deletePlaylistListing } from '../actions/playlist_actions';
 
 
 const SongTable = (props) => {
   const songs = values(props.songs);
-  const rowFetchSongDetails = props.fetchSongDetails;
 
   const songRows = songs.map((song, idx) => {
     return (
       <SongRow
         song={ song }
         key={ idx }
-        rowFetchSongDetails={ rowFetchSongDetails } />
+        fetchSongDetails={ props.fetchSongDetails }
+        deletePlaylistListing={ props.deletePlaylistListing }
+        playlistView={ props.playlistView } />
     );
   });
 
@@ -42,7 +44,8 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
-    fetchSongDetails: (id) => dispatch(fetchSongDetails(id))
+    fetchSongDetails: (id) => dispatch(fetchSongDetails(id)),
+    deletePlaylistListing: (id) => dispatch(deletePlaylistListing(id))
   };
 };
 

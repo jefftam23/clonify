@@ -1,18 +1,26 @@
 import React from 'react';
 
-const SongDropdown = () => {
+const SongDropdown = ({ songId, listingId, fetchSongDetails, deletePlaylistListing, playlistView }) => {
+  const deleteButton = (
+    <li>
+      <button
+        onClick={ () => deletePlaylistListing(listingId) }>Delete
+      </button>
+    </li>
+  );
+
   return (
     <ul className="song-dropdown">
       <li>
 
       <ul>
         <li>
-          <button>Play</button>
+          <button
+            onClick={ () => fetchSongDetails(songId) }>Play
+          </button>
         </li>
 
-        <li>
-          <button>Delete</button>
-        </li>
+        { playlistView ? deleteButton : "" }
       </ul>
 
       </li>
