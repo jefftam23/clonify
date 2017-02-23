@@ -1,0 +1,35 @@
+.song-dropdown {
+  display: block;
+}
+
+.song-dropdown > li {
+  // background: url(../../assets/images/song.png);
+  background: red;
+  background-repeat: no-repeat;
+  background-size: 50px 50px;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  cursor: pointer;
+}
+
+.song-dropdown ul {
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  flex-direction: column;
+  cursor: pointer;
+  box-shadow: black 5px 5px 10px;
+}
+
+/* This is how we create pure css dropdown effects. No JS required. */
+.song-dropdown:hover ul {
+  display: flex;
+  z-index: 1;
+  background: blue;
+}
+
+.song-dropdown ul li:hover a {
+  text-decoration: underline;
+}
