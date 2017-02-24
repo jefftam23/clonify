@@ -7,11 +7,19 @@ class SongDropdown extends React.Component {
     this.state = { display: false };
 
     this.toggleDisplay = this.toggleDisplay.bind(this);
+    this.toggleDisplayThenAction = this.toggleDisplayThenAction.bind(this);
   }
 
   toggleDisplay() {
     const nextState = !this.state.display;
     this.setState({ display: nextState });
+  }
+
+  toggleDisplayThenAction(action) {
+    return (e) => {
+      this.toggleDisplay();
+      action();
+    };
   }
 
   render() {
@@ -24,7 +32,7 @@ class SongDropdown extends React.Component {
             playlistView } = this.props;
 
     let playlistArr = [];
-    if (Boolean(playlists)){
+    if (playlists) {
       playlistArr = values(playlists);
     }
 
@@ -36,7 +44,7 @@ class SongDropdown extends React.Component {
       return (
         <li key={ idx }>
           <button
-            onClick={ () => createPlaylistListing(listing) }>&nbsp;
+            onClick={ this.toggleDisplayThenAction(() => createPlaylistListing(listing)) }>&nbsp;
               <span>Add to { playlist.name }</span>
           </button>
         </li>
@@ -46,7 +54,7 @@ class SongDropdown extends React.Component {
     const deleteButton = (
       <li>
         <button
-          onClick={ () => deletePlaylistListing(listingId) }>&nbsp;
+          onClick={ this.toggleDisplayThenAction(() => deletePlaylistListing(listingId)) }>&nbsp;
             <span>Delete</span>
         </button>
       </li>
@@ -58,7 +66,7 @@ class SongDropdown extends React.Component {
         <ul>
           <li>
             <button
-              onClick={ () => fetchSongDetails(songId) }>&nbsp;
+              onClick={ this.toggleDisplayThenAction(() => fetchSongDetails(songId)) }>&nbsp;
                 <span>Play</span>
             </button>
           </li>
