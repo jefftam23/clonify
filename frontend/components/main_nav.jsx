@@ -63,7 +63,7 @@ class MainNav extends React.Component {
               </li>
 
               <li className="follow-nav">
-                <Link to="/browse">
+                <Link to="/follow">
                   <img src={ window.images.followIcon } />
                   <p className="nav-item-text">Follow</p>
                 </Link>
