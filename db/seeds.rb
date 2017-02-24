@@ -46,6 +46,7 @@ albums = [
   {name: 'Weezer (Blue Album)', image: seed_image(ALBUMS, 'weezer_blue_album.png'), artist: Artist.find_by_name('Weezer')},
   {name: 'Pinkerton', image: seed_image(ALBUMS, 'pinkerton.jpg'), artist: Artist.find_by_name('Weezer')},
   {name: 'In Between Dreams', image: seed_image(ALBUMS, 'in_between_dreams.jpg'), artist: Artist.find_by_name('Jack Johnson')},
+  {name: 'The Album', image: seed_image(ALBUMS, 'the_album.jpg'), artist: Artist.find_by_name('Haddaway')},
 ]
 
 albums.each do |attributes|
@@ -60,6 +61,7 @@ songs = [
   {name: 'No Other Way', audio: seed_audio('No Other Way.mp3'), album: Album.find_by_name('In Between Dreams')},
   {name: 'Do You Remember', audio: seed_audio('Do You Remember.mp3'), album: Album.find_by_name('In Between Dreams')},
   {name: 'Better Together', audio: seed_audio('Better Together.mp3'), album: Album.find_by_name('In Between Dreams')},
+  {name: 'What Is Love', audio: seed_audio('What Is Love.mp3'), album: Album.find_by_name('The Album')},
 ]
 
 songs.each do |attributes|
