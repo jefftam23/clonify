@@ -47,6 +47,7 @@
 }
 
 .main-nav-items a {
+  position: relative;
   box-sizing: border-box;
   cursor: pointer;
   display: flex;
@@ -57,8 +58,19 @@
 }
 
 .main-nav-items > li.selected > a {
-  border-left: 3px solid $bright-green-hover;
   opacity: 1;
+}
+
+.main-nav-items > li.selected > a::before {
+  display: block;
+  content: ' ';
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: $bright-green-hover;
+  margin: 15px 0;
+  height: 45px;
+  width: 3px;
 }
 
 .main-nav-items a:hover {
