@@ -31,6 +31,10 @@
   white-space: pre;
 }
 
+.song-table td a:hover {
+  text-decoration: underline;
+}
+
 .song-table tr > td:first-child {
   width: 40px;
   padding-left: 10px;
