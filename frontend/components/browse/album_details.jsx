@@ -5,6 +5,10 @@ import LoadingIcon from '../loading_icon';
 import { Link } from 'react-router';
 
 class AlbumDetails extends React.Component {
+  componentWillMount() {
+    this.props.receiveActiveNavItem();
+  }
+
   componentDidMount() {
     this.props.fetchAlbumDetails(this.props.params.albumId);
   }

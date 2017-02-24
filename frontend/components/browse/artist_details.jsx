@@ -5,6 +5,7 @@ import LoadingIcon from '../loading_icon';
 
 class ArtistDetails extends React.Component {
   componentDidMount() {
+    this.props.receiveActiveNavItem();
     this.props.fetchArtistDetails(this.props.params.artistId);
   }
 

@@ -1,5 +1,7 @@
 import { connect } from 'react-redux';
 import Browse from './browse';
+import { BROWSE,
+         receiveActiveNavItem } from '../../actions/active_nav_item_actions';
 
 const mapStateToProps = (state, ownProps) => {
   return {
@@ -10,6 +12,7 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
+    receiveActiveNavItem: () => dispatch(receiveActiveNavItem(BROWSE))
   };
 };
 

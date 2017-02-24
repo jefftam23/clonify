@@ -3,6 +3,9 @@ import { withRouter } from 'react-router';
 import ArtistIndexContainer from './artist_index_container';
 
 class Browse extends React.Component {
+  componentWillMount() {
+    this.props.receiveActiveNavItem();
+  }
 
   componentWillReceiveProps(newProps) {
     if (!newProps.loggedIn) {

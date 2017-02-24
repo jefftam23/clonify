@@ -3,6 +3,10 @@ import EditablePlaylistList from './editable_playlist_list';
 import PlaylistDetails from './playlist_details';
 
 class YourMusic extends React.Component {
+  componentWillMount() {
+    this.props.receiveActiveNavItem();
+  }
+
   componentDidMount() {
     const { fetchPlaylists } = this.props;
     fetchPlaylists();

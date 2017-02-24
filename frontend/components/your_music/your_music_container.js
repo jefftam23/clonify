@@ -5,6 +5,8 @@ import { fetchPlaylists,
          createPlaylist,
          receivePlaylistDetails,
          deletePlaylist } from '../../actions/playlist_actions';
+import { YOUR_MUSIC,
+         receiveActiveNavItem } from '../../actions/active_nav_item_actions';
 
 const mapStateToProps = (state) => {
   return {
@@ -19,7 +21,8 @@ const mapDispatchToProps = (dispatch) => {
     fetchPlaylistDetails: (id) => dispatch(fetchPlaylistDetails(id)),
     createPlaylist: (playlist) => dispatch(createPlaylist(playlist)),
     receivePlaylistDetails: (details) => dispatch(receivePlaylistDetails(details)),
-    deletePlaylist: (id) => dispatch(deletePlaylist(id))
+    deletePlaylist: (id) => dispatch(deletePlaylist(id)),
+    receiveActiveNavItem: () => dispatch(receiveActiveNavItem(YOUR_MUSIC))
   };
 };
 
