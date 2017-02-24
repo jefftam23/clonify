@@ -43,11 +43,7 @@ const PlaylistHeader = ({ playlistDetails, deletePlaylist, updatePlaylist }) => 
         <div className="details-header-info">
           <span>Playlist</span>
           <h1>{ name }</h1>
-
-          {
-            // dropdown
-          }
-
+          { dropdown }
           { playlistOwner }
         </div>
 

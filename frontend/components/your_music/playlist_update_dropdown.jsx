@@ -46,7 +46,7 @@ class PlaylistUpdateDropdown extends React.Component {
             </li>
 
             <li>
-              <input type="submit" value="RENAME" />
+              <input type="submit" value="Rename Playlist" />
             </li>
           </ul>
         </form>
