@@ -21,11 +21,11 @@ class PlaylistUpdateDropdown extends React.Component {
 
   updatePlaylist(e) {
     e.preventDefault();
-    this.toggleDisplay()
+    this.toggleDisplay();
     this.props.update({
       id: this.props.playlistId,
       name: this.state.name
-    })
+    });
   }
 
   updateName(e) {
@@ -59,7 +59,7 @@ class PlaylistUpdateDropdown extends React.Component {
 
     return (
       <div className="playlist-update-dropdown">
-        <button onClick={ this.toggleDisplay }>...</button>
+        <button onClick={ this.toggleDisplay }></button>
         { menu }
       </div>
     );

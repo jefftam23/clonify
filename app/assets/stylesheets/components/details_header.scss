@@ -17,6 +17,7 @@
 }
 
 .details-header-info {
+  position: relative;
   margin: 15px 15px 15px 0;
 }
 
@@ -32,6 +33,7 @@
   font-size: 32px;
   line-height: 36px;
   margin: 5px 0;
+  width: 100%;
   white-space: pre;
   overflow: hidden;
   text-overflow: ellipsis;
