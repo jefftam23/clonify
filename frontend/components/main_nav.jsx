@@ -19,7 +19,6 @@ class MainNav extends React.Component {
 
     const navIcons = document.querySelectorAll(".main-nav-items > li");
     navIcons.forEach((icon) => {
-      console.log(icon);
       icon.classList.remove("selected");
     });
 
@@ -30,10 +29,6 @@ class MainNav extends React.Component {
     } else if (follow) {
       document.querySelector(".follow-nav").classList.add("selected");
     }
-
-    navIcons.forEach((icon) => {
-      console.log(icon);
-    });
   }
 
   render() {
