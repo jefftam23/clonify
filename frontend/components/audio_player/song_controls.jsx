@@ -56,6 +56,15 @@ class SongControls extends React.Component {
   updateTrackTime() {
     this.seekBar.value = parseInt(this.audioEl.currentTime).toString();
     this.updateState();
+
+    const percentage = parseInt(this.seekBar.value) / this.seekBar.max;
+
+    $(this.seekBar).css('background-image',
+      '-webkit-gradient(linear, left top, right top, '
+      + 'color-stop(' + percentage + ', #84bd00), '
+      + 'color-stop(' + percentage + ', #3e3e40)'
+      + ')'
+    );
   }
 
   changeTrackPosition(e) {
@@ -91,12 +100,14 @@ class SongControls extends React.Component {
           </audio>
         }
 
-        <input
-          id="seek-bar"
-          type="range"
-          min="0"
-          max={ this.state.duration }
-          onChange={ this.changeTrackPosition } />
+        <div className="seek-bar-wrapper">
+          <input
+            id="seek-bar"
+            type="range"
+            min="0"
+            max={ this.state.duration }
+            onChange={ this.changeTrackPosition } />
+        </div>
 
         <p className="track-times">
           <span className="track-current-time">
