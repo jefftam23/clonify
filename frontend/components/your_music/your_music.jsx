@@ -27,6 +27,7 @@ class YourMusic extends React.Component {
         <div className="your-music-wrapper">
           <EditablePlaylistList
             playlists={ playlists }
+            playlistDetails={ playlistDetails }
             fetchPlaylistDetails={ fetchPlaylistDetails }
             createPlaylist={ createPlaylist } />
 

@@ -6,14 +6,22 @@ import PlaylistCreator from './playlist_creator';
 class EditablePlaylistList extends React.Component {
   render() {
     const playlists = values(this.props.playlists);
-    const { fetchPlaylistDetails, createPlaylist } = this.props;
+    const { playlistDetails,
+            fetchPlaylistDetails,
+            createPlaylist } = this.props;
 
     const playlistListItems = playlists.map((playlist, idx) => {
+      let selected = "";
+      if (playlistDetails.id && playlistDetails.id === playlist.id) {
+        selected = "selected";
+      }
+
       return (
         <PlaylistListItem
           playlist={ playlist }
           fetchPlaylistDetails={ fetchPlaylistDetails }
-          key={ idx } />
+          key={ idx }
+          selected={ selected } />
       );
     });
 

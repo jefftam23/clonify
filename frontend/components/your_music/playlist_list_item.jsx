@@ -1,12 +1,8 @@
 import React from 'react';
 
-const PlaylistListItem = ({ playlist, fetchPlaylistDetails }) => {
+const PlaylistListItem = ({ playlist, fetchPlaylistDetails, selected }) => {
   return (
-    <li className="playlist-list-item">
-      {
-        // wrap everything in a button that will fetch the album details
-        // and trigger a re-render of the SongTable
-      }
+    <li className={ `playlist-list-item ${selected}` }>
       <button onClick={ () => fetchPlaylistDetails(playlist.id) }>
         <img src={ playlist.imageUrl } />
 

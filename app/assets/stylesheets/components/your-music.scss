@@ -74,8 +74,23 @@
   height: 70px;
 }
 
+.playlist-list-item {
+  position: relative;
+}
+
 .playlist-list-item:hover {
   background: #222326;
+}
+
+.playlist-list-item.selected button::before {
+  display: block;
+  content: ' ';
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: $bright-green-hover;
+  height: 100%;
+  width: 2px;
 }
 
 .playlist-list-item button {
