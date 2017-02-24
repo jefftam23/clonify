@@ -21,9 +21,14 @@
   border-top: 1px solid #222326;
 }
 
+.st-header-row th:first-child {
+  width: 60px;
+}
+
 .song-table td {
   border-top: 1px solid #222326;
   padding: 10px 10px 10px 0;
+  white-space: pre;
 }
 
 .song-table tr > td:first-child {
