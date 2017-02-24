@@ -18,7 +18,8 @@ class YourMusic extends React.Component {
             fetchPlaylistDetails,
             createPlaylist,
             receivePlaylistDetails,
-            deletePlaylist } = this.props;
+            deletePlaylist,
+            updatePlaylist } = this.props;
 
     return (
       <div className="main-content">
@@ -34,8 +35,8 @@ class YourMusic extends React.Component {
           <PlaylistDetails
             playlistDetails={ playlistDetails }
             receivePlaylistDetails={ receivePlaylistDetails }
-            currentUser={ currentUser }
-            deletePlaylist={ deletePlaylist } />
+            deletePlaylist={ deletePlaylist }
+            updatePlaylist={ updatePlaylist } />
         </div>
       </div>
     );

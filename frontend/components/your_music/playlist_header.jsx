@@ -1,11 +1,12 @@
 import React from 'react';
+import PlaylistUpdateDropdown from './playlist_update_dropdown';
 
-
-const PlaylistHeader = ({ playlistDetails, deletePlaylist }) => {
+const PlaylistHeader = ({ playlistDetails, deletePlaylist, updatePlaylist }) => {
   const { id: playlistId, name, imageUrl, ownerUsername } = playlistDetails;
 
   let buttons = "";
-  let playlistCreator = "";
+  let playlistOwner = "";
+  let dropdown = "";
   if (name) {
     buttons = (
       <div className="playlist-header-buttons">
@@ -18,10 +19,17 @@ const PlaylistHeader = ({ playlistDetails, deletePlaylist }) => {
       </div>
     );
 
-    playlistCreator = (
+    playlistOwner = (
       <h2>By&nbsp;
         <a>{ ownerUsername }</a>
       </h2>
+    );
+
+    dropdown = (
+      <PlaylistUpdateDropdown
+        playlistId={ playlistId }
+        name={ name }
+        update={ updatePlaylist } />
     );
   }
 
@@ -35,7 +43,12 @@ const PlaylistHeader = ({ playlistDetails, deletePlaylist }) => {
         <div className="details-header-info">
           <span>Playlist</span>
           <h1>{ name }</h1>
-          { playlistCreator }
+
+          {
+            // dropdown
+          }
+
+          { playlistOwner }
         </div>
 
         { buttons }

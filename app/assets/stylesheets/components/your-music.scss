@@ -82,6 +82,10 @@
   background: #222326;
 }
 
+.playlist-list-item.selected {
+  background: #222326;
+}
+
 .playlist-list-item.selected button::before {
   display: block;
   content: ' ';

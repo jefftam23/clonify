@@ -9,13 +9,14 @@ class PlaylistDetails extends React.Component {
   }
 
   render() {
-    const { playlistDetails, deletePlaylist } = this.props;
+    const { playlistDetails, deletePlaylist, updatePlaylist } = this.props;
 
     return (
       <div className="playlist-details">
         <PlaylistHeader
           playlistDetails={ playlistDetails }
-          deletePlaylist={ deletePlaylist } />
+          deletePlaylist={ deletePlaylist }
+          updatePlaylist={ updatePlaylist } />
 
         <SongTable
           songs={ playlistDetails.songs }
