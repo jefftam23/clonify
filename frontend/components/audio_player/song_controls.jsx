@@ -109,6 +109,10 @@ class SongControls extends React.Component {
         </p>
 
         <div className="controls-wrapper">
+          <button className="rewind-button">
+            <img src={ window.images.rewind } />
+          </button>
+
           <button
             className="toggle-play-button"
             onClick={ this.togglePlay }>
@@ -117,6 +121,28 @@ class SongControls extends React.Component {
                 this.state.playing ?
                 window.images.pause :
                 window.images.play } />
+          </button>
+
+          <button className="fastforward-button">
+            <img src={ window.images.fastforward } />
+          </button>
+        </div>
+
+        <div className="play-options-wrapper">
+          <button className>
+            <img src={ window.images.playQueue } />
+          </button>
+
+          <button className>
+            <img src={ window.images.shuffle } />
+          </button>
+
+          <button className>
+            <img src={ window.images.repeat } />
+          </button>
+
+          <button className>
+            <img src={ window.images.volume } />
           </button>
         </div>
       </div>
