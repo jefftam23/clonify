@@ -6,6 +6,8 @@
 
 Clonify is a full-stack web application inspired by Spotify's web player built with Ruby on Rails and React/Redux.
 
+![browse](./screenshots/browse.png)
+
 ## Features
 
  - User login and sign-up
@@ -13,7 +15,7 @@ Clonify is a full-stack web application inspired by Spotify's web player built w
  - Continuous song playback while navigating site
  - Creating, updating, viewing, and deleting playlists
  - Adding/removing songs from playlists
- 
+
 ## Implementation
 
 ### Audio and Image Hosting
