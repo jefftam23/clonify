@@ -1,11 +1,8 @@
 # Clonify
 
-[Heroku link][heroku]
+[Clonify live][heroku]
 
-[Trello link][trello]
-
-[heroku]: https://clonify.herokuapp.com
-[trello]: https://trello.com/b/gvIetAEc/clonify
+[heroku]: http://www.clonifyapp.com
 
 ## Minimum Viable Product
 
@@ -15,13 +12,12 @@ following criteria with smooth, bug-free navigation, adequate seed data and
 sufficient CSS styling:
 
 - [x] Hosting on Heroku
-- [ ] New account creation, login, and guest/demo login
-- [ ] Song playing
-- [ ] Continuous play while navigating site
-- [ ] Playlist CRUD
+- [x] New account creation, login, and guest/demo login
+- [x] Song playing
+- [x] Continuous play while navigating site
+- [x] Playlist CRUD
 - [ ] Playlist following
 - [ ] User following
-- [ ] [Production README] (../README.md)
 
 ## Design Docs
 * [View Wireframes][wireframes]
