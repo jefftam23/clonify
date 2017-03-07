@@ -1,4 +1,9 @@
 class Api::UsersController < ApplicationController
+  def index
+    @users = User.includes(:followers, :followees).reject { |user| user == current_user }
+    render :index
+  end
+
   def create
     @user = User.new(user_params)
 
