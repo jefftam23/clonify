@@ -22,6 +22,17 @@ class User < ActiveRecord::Base
     primary_key: :id,
     foreign_key: :owner_id
 
+  has_many :in_follows, dependent: :destroy,
+    class_name: 'UserFollow',
+    foreign_key: :followee_id
+
+  has_many :out_follows, dependent: :destroy,
+    class_name: 'UserFollow',
+    foreign_key: :follower_id
+
+  has_many :followers, through: :in_follows
+  has_many :followees, through: :out_follows
+
   after_initialize :ensure_session_token
 
   def self.find_by_credentials(username, password)
