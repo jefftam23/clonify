@@ -10,6 +10,7 @@ import ArtistDetailsContainer from './browse/artist_details_container';
 import AlbumDetailsContainer from './browse/album_details_container';
 import YourMusicContainer from './your_music/your_music_container';
 import FollowContainer from './follow/follow_container';
+import UserDetailsContainer from './follow/user_details_container';
 
 const Root = ({ store }) => {
 
@@ -56,6 +57,7 @@ const Root = ({ store }) => {
             <Route path="/albums/:albumId" component={ AlbumDetailsContainer } onEnter={ _ensureLoggedIn } />
             <Route path="/your-music" component={ YourMusicContainer } onEnter={ _ensureLoggedIn } />
             <Route path="/follow" component={ FollowContainer } onEnter={ _ensureLoggedIn } />
+            <Route path="/users/:userId" component={ UserDetailsContainer } onEnter={ _ensureLoggedIn } />
           </Route>
         </Route>
 
