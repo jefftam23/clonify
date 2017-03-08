@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 const UserIndexItem = ({ user, createUserFollow, deleteUserFollow }) => {
   const { id, followId, username, followee, follower } = user;
@@ -17,12 +18,14 @@ const UserIndexItem = ({ user, createUserFollow, deleteUserFollow }) => {
     <li>
       <div className="details-header user">
         <div className="header-img-wrapper">
-          <img src="" />
+          <Link to={ `/users/${id}` }><img src="" /></Link>
         </div>
 
         <div className="details-header-info">
           <span>User</span>
-          <h1>{ username }</h1>
+          <h1>
+            <Link to={ `/users/${id}` }>{ username }</Link>
+          </h1>
           <span>{ follower ? "Follows You" : "" }</span>
           <button
             onClick={ toggleFollow }>{ buttonText }
