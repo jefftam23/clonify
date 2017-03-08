@@ -13,7 +13,9 @@ class UserIndex extends React.Component {
       return (
         <UserIndexItem
           key={ idx }
-          user={ user } />
+          user={ user }
+          createUserFollow={ this.props.createUserFollow }
+          deleteUserFollow={ this.props.deleteUserFollow } />
       );
     });
 

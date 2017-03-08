@@ -1,6 +1,8 @@
 import { connect } from 'react-redux';
 import UserIndex from './user_index';
-import { fetchAllUsers } from '../../actions/user_actions';
+import { fetchAllUsers,
+         createUserFollow,
+         deleteUserFollow } from '../../actions/user_actions';
 
 const mapStateToProps = (state, ownProps) => {
   return {
@@ -10,7 +12,9 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
-    fetchAllUsers: () => dispatch(fetchAllUsers())
+    fetchAllUsers: () => dispatch(fetchAllUsers()),
+    createUserFollow: (userFollow) => dispatch(createUserFollow(userFollow)),
+    deleteUserFollow: (id) => dispatch(deleteUserFollow(id))
   };
 };
 
