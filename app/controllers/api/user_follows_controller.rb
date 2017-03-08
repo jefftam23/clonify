@@ -5,6 +5,7 @@ class Api::UserFollowsController < ApplicationController
 
     if @user_follow.save
       @user = @user_follow.followee
+      @follow_id = @user_follow.id
       render :show
     else
     end
