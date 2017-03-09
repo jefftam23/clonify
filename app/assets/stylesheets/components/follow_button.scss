@@ -1,0 +1,40 @@
+.follow-button {
+  display: block;
+  padding: 0 20px;
+  height: 28px;
+  max-height: 28px;
+  width: 80px;
+  border-radius: 500px;
+  text-align: center;
+  border: 1px solid white;
+  margin: 10px 0;
+  opacity: 0.9;
+}
+
+.follow-button span {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: white;
+}
+
+.follow-button:hover {
+  border: 1px solid $bright-green-hover;
+  opacity: 1;
+}
+
+.follow-button.Following:hover span {
+  display: none;
+}
+
+.follow-button.Following:hover:after {
+  content: 'unfollow';
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: white;
+}
