@@ -1,5 +1,13 @@
 .details-header.user {
   background: black;
   border: 1px solid white;
-  margin: 10px 0;
+  margin: 15px 0;
+}
+
+.details-header.user a {
+  font-family: "proxima nova light", sans-serif;
+}
+
+.details-header.user a:hover img {
+  opacity: 0.5;
 }
