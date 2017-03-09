@@ -3,7 +3,8 @@
   followId = follow ? follow.id : nil
 
   json.set! user.id do
-    json.partial! 'api/users/user', user: user
+    json.id user.id
+    json.username user.username
     json.follower user.followees.include?(current_user)
     json.followee user.followers.include?(current_user)
     json.followId followId

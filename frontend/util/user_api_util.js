@@ -5,6 +5,13 @@ export const fetchAllUsers = () => {
   });
 };
 
+export const fetchUserDetails = (id) => {
+  return $.ajax({
+    method: 'GET',
+    url: `/api/users/${id}`
+  });
+};
+
 export const createUserFollow = (userFollow) => {
   return $.ajax({
     method: 'POST',

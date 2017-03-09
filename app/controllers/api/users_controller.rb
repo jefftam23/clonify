@@ -4,6 +4,20 @@ class Api::UsersController < ApplicationController
     render :index
   end
 
+  def show
+    # @user = User.find(params[:id]).includes(:followers, :followees)
+    # N + 1 queries for single user? check pokemon index
+    @user = User.find(params[:id])
+    @follow_id = UserFollow.where(
+      follower_id: current_user.id,
+      followee_id: @user.id
+    ).first
+
+    @follow_id = @follow_id.id if @follow_id
+
+    render :show
+  end
+
   def create
     @user = User.new(user_params)
 

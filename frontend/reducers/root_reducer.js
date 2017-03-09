@@ -11,6 +11,7 @@ import YourMusicPlaylistsReducer from './your_music_playlists_reducer';
 import PlaylistDetailsReducer from './playlist_details_reducer';
 import ActiveNavItemReducer from './active_nav_item_reducer';
 import UsersReducer from './users_reducer';
+import UserDetailsReducer from './user_details_reducer';
 
 const AppReducer = combineReducers({
   session: SessionReducer,
@@ -23,6 +24,7 @@ const AppReducer = combineReducers({
   playlistDetails: PlaylistDetailsReducer,
   activeNavItem: ActiveNavItemReducer,
   users: UsersReducer,
+  userDetails: UserDetailsReducer
 });
 
 const RootReducer = (state, action) => {
