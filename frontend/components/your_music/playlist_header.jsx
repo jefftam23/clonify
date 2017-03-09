@@ -36,7 +36,7 @@ const PlaylistHeader = ({ playlistDetails, deletePlaylist, updatePlaylist }) => 
   return (
     <div className="details-header playlist-header">
       <div className="header-img-wrapper">
-        <img className="playlist-header-img" src={ imageUrl }/>
+        <img className="header-img" src={ imageUrl }/>
       </div>
 
       <div className="header-info-wrapper">
