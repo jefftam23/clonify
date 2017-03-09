@@ -6,7 +6,7 @@ class Api::UserFollowsController < ApplicationController
     if @user_follow.save
       @user = @user_follow.followee
       @follow_id = @user_follow.id
-      render :show
+      render 'api/users/show'
     else
     end
   end
@@ -15,7 +15,7 @@ class Api::UserFollowsController < ApplicationController
     @user_follow = UserFollow.find(params[:id])
     @user = @user_follow.followee
     @user_follow.destroy!
-    render :show
+    render 'api/users/show'
   end
 
   private
