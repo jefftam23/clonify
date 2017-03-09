@@ -3,11 +3,11 @@ import { Link } from 'react-router';
 import FollowButton from '../follow_button';
 
 const UserIndexItem = ({ user, createUserFollow, deleteUserFollow }) => {
-  const { id, imageUrl, followId, username, followee, follower } = user;
-  const buttonText = followee ? "Following" : "Follow";
+  const { id, imageUrl, followId, username, follower } = user;
+  const buttonText = followId ? "Following" : "Follow";
 
   let toggleFollow;
-  if (followee) {
+  if (followId) {
     // unfollow
     toggleFollow = () => deleteUserFollow(followId);
   } else {
