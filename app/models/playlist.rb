@@ -17,7 +17,7 @@ class Playlist < ActiveRecord::Base
   validates :name, :owner, presence: true
 
   has_attached_file :image,
-    default_url: -> (attachment) { ActionController::Base.helpers.asset_path('playlist-default.png') }  
+    default_url: -> (attachment) { ActionController::Base.helpers.asset_path('playlist-default.png') }
 
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
