@@ -12,7 +12,7 @@ const UsersReducer = (oldState = {}, action) => {
       return action.users;
 
     case RECEIVE_SINGLE_USER:
-      return merge({}, oldState, action.user);
+      return merge({}, oldState, { [action.user.id]: action.user });
 
     default:
       return oldState;

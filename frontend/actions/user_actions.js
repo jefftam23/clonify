@@ -2,7 +2,7 @@ import * as UserApiUtil from '../util/user_api_util';
 
 export const RECEIVE_ALL_USERS = "RECEIVE_ALL_USERS";
 export const RECEIVE_SINGLE_USER = "RECEIVE_SINGLE_USER";
-export const RECEIVE_USER_DETAILS = "RECEIVE_USER_DETAILS";
+export const START_LOADING_USER_DETAILS = "START_LOADING_USER_DETAILS";
 
 export const fetchAllUsers = () => {
   return (dispatch) => {
@@ -13,8 +13,9 @@ export const fetchAllUsers = () => {
 
 export const fetchUserDetails = (id) => {
   return (dispatch) => {
+    dispatch(startLoadingUserDetails());
     return UserApiUtil.fetchUserDetails(id)
-      .then(userDetails => dispatch(receiveUserDetails(userDetails)));
+      .then(respUser => dispatch(receiveSingleUser(respUser)));
   };
 };
 
@@ -46,9 +47,8 @@ export const receiveSingleUser = (user) => {
   };
 };
 
-export const receiveUserDetails = (userDetails) => {
+export const startLoadingUserDetails = () => {
   return {
-    type: RECEIVE_USER_DETAILS,
-    userDetails
+    type: START_LOADING_USER_DETAILS
   };
 };
