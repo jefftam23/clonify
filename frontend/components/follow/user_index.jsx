@@ -1,7 +1,7 @@
 import React from 'react';
 import { values } from 'lodash';
 import UserIndexItem from './user_index_item';
-
+import LoadingIcon from '../loading_icon';
 
 class UserIndex extends React.Component {
   componentDidMount() {
@@ -9,6 +9,14 @@ class UserIndex extends React.Component {
   }
 
   render() {
+    if (this.props.loading) {
+      return (
+        <div className="main-content">
+          <LoadingIcon />
+        </div>
+      );
+    }
+
     const userIndexItems = values(this.props.users).map((user, idx) => {
       return (
         <UserIndexItem

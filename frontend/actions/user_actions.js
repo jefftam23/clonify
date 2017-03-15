@@ -3,9 +3,11 @@ import * as UserApiUtil from '../util/user_api_util';
 export const RECEIVE_ALL_USERS = "RECEIVE_ALL_USERS";
 export const RECEIVE_SINGLE_USER = "RECEIVE_SINGLE_USER";
 export const START_LOADING_USER_DETAILS = "START_LOADING_USER_DETAILS";
+export const START_LOADING_USER_INDEX = "START_LOADING_USER_INDEX";
 
 export const fetchAllUsers = () => {
   return (dispatch) => {
+    dispatch(startLoadingUserIndex());
     return UserApiUtil.fetchAllUsers()
       .then(users => dispatch(receiveAllUsers(users)));
   };
@@ -50,5 +52,11 @@ export const receiveSingleUser = (user) => {
 export const startLoadingUserDetails = () => {
   return {
     type: START_LOADING_USER_DETAILS
+  };
+};
+
+export const startLoadingUserIndex = () => {
+  return {
+    type: START_LOADING_USER_INDEX
   };
 };

@@ -6,13 +6,16 @@ import {
   RECEIVE_ALBUM_DETAILS } from '../actions/album_actions';
 import {
   START_LOADING_USER_DETAILS,
-  RECEIVE_SINGLE_USER } from '../actions/user_actions';
+  START_LOADING_USER_INDEX,
+  RECEIVE_SINGLE_USER,
+  RECEIVE_ALL_USERS } from '../actions/user_actions';
 import merge from 'lodash/merge';
 
 const _defaultState = {
   artistDetailsLoading: false,
   albumDetailsLoading: false,
-  userDetailsLoading: false
+  userDetailsLoading: false,
+  userIndexLoading: false
 };
 
 Object.freeze(_defaultState);
@@ -30,9 +33,13 @@ const LoadingReducer = (oldState = _defaultState, action) => {
     case START_LOADING_USER_DETAILS:
       return merge({}, oldState, { userDetailsLoading: true });
 
+    case START_LOADING_USER_INDEX:
+      return merge({}, oldState, { userIndexLoading: true });
+
     case RECEIVE_ARTIST_DETAILS:
     case RECEIVE_ALBUM_DETAILS:
     case RECEIVE_SINGLE_USER:
+    case RECEIVE_ALL_USERS:
       return _defaultState;
 
     default:

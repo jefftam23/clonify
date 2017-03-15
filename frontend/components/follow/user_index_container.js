@@ -6,7 +6,8 @@ import { fetchAllUsers,
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    users: state.users
+    users: state.users,
+    loading: state.loading.userIndexLoading
   };
 };
 
