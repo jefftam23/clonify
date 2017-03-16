@@ -22,6 +22,7 @@ class User < ActiveRecord::Base
   validates :password, length: { minimum: 6, allow_nil: true }
 
   has_attached_file :image,
+    styles: { thumb: '130x130#' },
     default_url: -> (attachment) { ActionController::Base.helpers.asset_path('user-default.png') }
 
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
