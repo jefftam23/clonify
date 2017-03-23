@@ -8,7 +8,7 @@ json.follower user.followees.include?(current_user) if user
 if user.nil? || user.playlists.empty?
   json.playlists({})
 else
-  json.playlists do
+  json.ownPlaylists do
     user.playlists.each do |playlist|
       json.set! playlist.id do
         json.extract! playlist, :id, :name
