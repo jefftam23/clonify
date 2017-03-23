@@ -1,6 +1,7 @@
 import React from 'react';
 import UserHeader from './user_header';
 import LoadingIcon from '../loading_icon';
+import PlaylistIndex from './playlist_index';
 
 class UserDetails extends React.Component {
   componentDidMount() {
@@ -25,7 +26,8 @@ class UserDetails extends React.Component {
             imageUrl,
             username,
             followId,
-            follower } = this.props.userDetails;
+            follower,
+            ownPlaylists } = this.props.userDetails;
 
     return (
       <div className="main-content">
@@ -37,6 +39,12 @@ class UserDetails extends React.Component {
           follower={ follower }
           deleteUserFollow={ this.props.deleteUserFollow }
           createUserFollow={ this.props.createUserFollow } />
+
+        <PlaylistIndex playlists={ ownPlaylists } />
+
+        {
+          // <PlaylistIndex playlists={ followedPlaylists } />
+        }
       </div>
     );
   }
