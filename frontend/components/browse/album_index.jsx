@@ -1,12 +1,15 @@
 import React from 'react';
-import AlbumIndexItem from './album_index_item';
+import GridIndexItem from '../grid_index_item';
 
 const AlbumIndex = ({ albums }) => {
   const albumIndexItems = albums.map((album, idx) => {
     return (
-      <AlbumIndexItem
+      <GridIndexItem
         key={ idx }
-        album={ album } />
+        id={ album.id }
+        name={ album.name }
+        imageUrl={ album.imageUrl }
+        type="albums" />
     );
   });
 

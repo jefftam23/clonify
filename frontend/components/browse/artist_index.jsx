@@ -1,5 +1,5 @@
 import React from 'react';
-import ArtistIndexItem from './artist_index_item';
+import GridIndexItem from '../grid_index_item';
 
 class ArtistIndex extends React.Component {
   componentDidMount() {
@@ -9,9 +9,12 @@ class ArtistIndex extends React.Component {
   render() {
     const artistIndexItems = this.props.artists.map((artist, idx) => {
       return (
-        <ArtistIndexItem
+        <GridIndexItem
           key={ idx }
-          artist={ artist } />
+          id={ artist.id }
+          name={ artist.name }
+          imageUrl={ artist.imageUrl }
+          type="artists" />
       );
     });
 
