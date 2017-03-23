@@ -89,16 +89,14 @@ class SongControls extends React.Component {
 
     return (
       <div className="song-controls">
-        {
-          <audio
-            id="audio"
-            src={ nowPlaying.audioUrl }
-            type="audio/mpeg"
-            onTimeUpdate={ this.updateTrackTime }
-            onEnded={ this.handleTrackEnd }
-            autoPlay>Your browser does not support the audio element.
-          </audio>
-        }
+        <audio
+          id="audio"
+          src={ nowPlaying.audioUrl }
+          type="audio/mpeg"
+          onTimeUpdate={ this.updateTrackTime }
+          onEnded={ this.handleTrackEnd }
+          autoPlay>Your browser does not support the audio element.
+        </audio>
 
         <div className="seek-bar-wrapper">
           <input

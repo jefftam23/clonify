@@ -29,16 +29,14 @@ class UserDetails extends React.Component {
 
     return (
       <div className="main-content">
-        {
-          <UserHeader
-            id={ id }
-            name={ username }
-            imageUrl={ imageUrl }
-            followId={ followId }
-            follower={ follower }
-            deleteUserFollow={ this.props.deleteUserFollow }
-            createUserFollow={ this.props.createUserFollow } />
-        }
+        <UserHeader
+          id={ id }
+          name={ username }
+          imageUrl={ imageUrl }
+          followId={ followId }
+          follower={ follower }
+          deleteUserFollow={ this.props.deleteUserFollow }
+          createUserFollow={ this.props.createUserFollow } />
       </div>
     );
   }
