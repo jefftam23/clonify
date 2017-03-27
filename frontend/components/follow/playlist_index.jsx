@@ -2,7 +2,7 @@ import React from 'react';
 import { values } from 'lodash';
 import GridIndexItem from '../grid_index_item';
 
-const PlaylistIndex = ({ playlists }) => {
+const PlaylistIndex = ({ title, playlists }) => {
   const playlistIndexItems = values(playlists).map((playlist, idx) => {
     return (
       <GridIndexItem
@@ -15,6 +15,7 @@ const PlaylistIndex = ({ playlists }) => {
 
   return (
     <div className="playlist-index-wrapper">
+      <h2>{ title }</h2>
       <ul className="playlist-index">
         { playlistIndexItems }
       </ul>

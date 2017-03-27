@@ -40,10 +40,12 @@ class UserDetails extends React.Component {
           deleteUserFollow={ this.props.deleteUserFollow }
           createUserFollow={ this.props.createUserFollow } />
 
-        <PlaylistIndex playlists={ ownPlaylists } />
+        <PlaylistIndex
+          title="Playlists"
+          playlists={ ownPlaylists } />
 
         {
-          // <PlaylistIndex playlists={ followedPlaylists } />
+          // <PlaylistIndex title="Followed Playlists" playlists={ followedPlaylists } />
         }
       </div>
     );
