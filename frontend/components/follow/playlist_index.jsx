@@ -3,7 +3,7 @@ import { values } from 'lodash';
 import GridIndexItem from '../grid_index_item';
 
 const PlaylistIndex = ({ title, playlists }) => {
-  const playlistIndexItems = values(playlists).map((playlist, idx) => {
+  let playlistIndexItems = values(playlists).map((playlist, idx) => {
     return (
       <GridIndexItem
         id={ playlist.id }
@@ -12,6 +12,12 @@ const PlaylistIndex = ({ title, playlists }) => {
         type="playlists" />
     );
   });
+
+  if (playlistIndexItems.length === 0) {
+    playlistIndexItems = (
+      <span>No playlists to show.</span>
+    );
+  }
 
   return (
     <div className="playlist-index-wrapper">
