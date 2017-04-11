@@ -1,5 +1,6 @@
 import React from 'react';
 import PlaylistUpdateDropdown from './playlist_update_dropdown';
+import FollowButton from '../follow_button';
 
 const PlaylistHeader = ({ playlistDetails, deletePlaylist, updatePlaylist }) => {
   const { id: playlistId, name, imageUrl, ownerUsername } = playlistDetails;
@@ -16,6 +17,10 @@ const PlaylistHeader = ({ playlistDetails, deletePlaylist, updatePlaylist }) => 
           className="header-delete-button"
           onClick={ () => deletePlaylist(playlistId) }>Delete
         </button>
+
+        <FollowButton
+          action={ () => console.log("follow button pressed") }
+          text="follow" />
       </div>
     );
 

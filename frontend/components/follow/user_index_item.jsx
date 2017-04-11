@@ -30,7 +30,9 @@ const UserIndexItem = ({ user, createUserFollow, deleteUserFollow }) => {
             <Link to={ `/users/${id}` }>{ username }</Link>
           </h1>
           <span>{ follower ? "Follows You" : "" }</span>
-          <FollowButton action={ toggleFollow } text={ buttonText } />
+          <div>
+            <FollowButton action={ toggleFollow } text={ buttonText } />
+          </div>
         </div>
       </div>
     </li>
