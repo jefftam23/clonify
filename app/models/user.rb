@@ -27,7 +27,6 @@ class User < ActiveRecord::Base
 
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
-
   has_many :playlists,
     class_name: 'Playlist',
     primary_key: :id,
@@ -41,8 +40,17 @@ class User < ActiveRecord::Base
     class_name: 'UserFollow',
     foreign_key: :follower_id
 
+  has_many :playlist_follows,
+    class_name: 'PlaylistFollow',
+    foreign_key: :follower_id,
+    dependent: :destroy
+
   has_many :followers, through: :in_follows
   has_many :followees, through: :out_follows
+
+  has_many :followed_playlists,
+    through: :playlist_follows,
+    source: :playlist
 
   after_initialize :ensure_session_token
 

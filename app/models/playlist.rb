@@ -26,6 +26,9 @@ class Playlist < ActiveRecord::Base
     primary_key: :id,
     foreign_key: :owner_id
 
+  has_many :follows, class_name: 'PlaylistFollow', dependent: :destroy
   has_many :playlist_listings, dependent: :destroy
+
   has_many :songs, through: :playlist_listings
+  has_many :followers, through: :follows
 end
