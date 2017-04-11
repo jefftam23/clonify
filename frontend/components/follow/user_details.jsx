@@ -41,7 +41,7 @@ class UserDetails extends React.Component {
           createUserFollow={ this.props.createUserFollow } />
 
         <PlaylistIndex
-          title="Playlists"
+          title="Own Playlists"
           playlists={ ownPlaylists } />
 
         {
