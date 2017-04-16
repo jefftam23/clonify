@@ -2,7 +2,7 @@ class Api::PlaylistsController < ApplicationController
   before_filter :require_authorization, only: [:update, :destroy]
 
   def index
-    @playlists = current_user.playlists
+    @playlists = current_user.playlists.includes(:owner)
     render :index
   end
 
@@ -10,6 +10,14 @@ class Api::PlaylistsController < ApplicationController
     @playlist = Playlist
       .includes(playlist_listings: { song: [:album, :artist] })
       .find(params[:id])
+
+
+    follow = PlaylistFollow.find_by(
+      follower_id: current_user.id,
+      playlist_id: @playlist.id
+    )
+
+    @follow_id = (follow.nil?) ? nil : follow.id
 
     render :show
   end

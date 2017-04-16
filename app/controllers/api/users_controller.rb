@@ -1,6 +1,9 @@
 class Api::UsersController < ApplicationController
   def index
-    @users = User.includes(:followers, :followees).reject { |user| user == current_user }
+    @current_user = current_user
+    @users = User
+      .includes(:in_follows, :followees, :playlists)
+      .where.not(id: @current_user.id)
     render :index
   end
 
