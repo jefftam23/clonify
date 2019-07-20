@@ -1,9 +1,5 @@
 # Clonify
 
-[Clonify live][heroku]
-
-[heroku]: http://www.clonifyapp.com
-
 Clonify is a full-stack web application inspired by Spotify's web player built with Ruby on Rails and React/Redux.
 
 ![browse](./screenshots/browse.png)
